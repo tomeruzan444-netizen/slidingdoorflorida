@@ -7,7 +7,8 @@ const PH = /\{\{([A-Z_]+)\}\}/g;
 
 /**
  * Lists every remaining {{PLACEHOLDER}}.
- * Fails the build on Vercel production (VERCEL_ENV=production) or when STRICT_PLACEHOLDERS=1.
+ * Fails the build on Vercel production (VERCEL_ENV=production) or when STRICT_PLACEHOLDERS=1,
+ * but only for placeholders a visitor could see (page copy). business.ts values are guarded by known().
  * Elsewhere it only warns, so previews keep building while owner data is pending.
  * Staging mode (SITE_STAGING=1 or placeholder domain) also only warns: that site is noindexed.
  */
@@ -35,9 +36,13 @@ export function checkPlaceholders(): Issue[] {
     if (!business.caseNotes.some((n) => n.service === slug)) add("CASE_NOTE", `content/pages/${f}`);
   }
 
+  // business.ts values (and missing case notes) never reach visitors: components render them only when known().
+  // Anything else, i.e. a placeholder typed into page copy, would show on the page, so it fails a strict build.
+  const hiddenFromVisitors = (where: Set<string>, name: string) =>
+    name === "CASE_NOTE" || [...where].every((w) => w === "content/business.ts");
   return [...found.entries()].map(([name, where]) => ({
-    level: strict ? "error" : "warn",
+    level: strict && !hiddenFromVisitors(where, name) ? "error" : "warn",
     check: "placeholders",
-    msg: `{{${name}}} in ${[...where].join(", ")}`,
+    msg: `{{${name}}} in ${[...where].join(", ")}${hiddenFromVisitors(where, name) ? " (hidden from visitors)" : ""}`,
   }));
 }

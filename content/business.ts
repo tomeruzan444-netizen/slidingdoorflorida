@@ -27,7 +27,7 @@ export type ServiceCounty = { county: string; cities: ServiceCity[] };
 
 export const business = {
   brandName: "Davis Sliding Door Repair",
-  domain: "{{DOMAIN}}", // e.g. https://www.example.com (no trailing slash)
+  domain: "https://davisslidingdoorflorida.com", // canonical host (www redirects here in Vercel); no trailing slash
   phone: "(954) 807-2446", // display format
   phoneE164: "+19548072446", // tel: format
   email: "davisslidingdoorrepair@gmail.com",

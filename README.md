@@ -55,11 +55,13 @@ URLs are flat: every page sits directly under the domain. Trailing-slash URLs 30
 
 City pages follow BUILD-PROMPT section 10: no city page without 5+ verified local facts and a real local job story.
 
-## Live address and staging mode
+## Live address
 
-Vercel project `slidingdoorflorida` (team tomer7), linked to this repo: every push to `main` deploys to https://slidingdoorflorida.vercel.app.
+Production: **https://davisslidingdoorflorida.com** (Vercel project `slidingdoorflorida`, team tomer7). `www.davisslidingdoorflorida.com` 308-redirects to the apex. Every push to `main` deploys.
 
-While `business.domain` is still a placeholder (or `SITE_STAGING=1`), the site runs in staging mode: `noindex, nofollow` meta tag and `X-Robots-Tag` header, robots.txt blocks everything, and the placeholder check only warns. Filling in the real domain turns staging off and makes placeholders fail the production build again.
+DNS is managed at box.co.il (not Vercel): apex `A` record to Vercel, `www` `CNAME` to Vercel. Vercel issues the SSL certificate once DNS points at it.
+
+The `*.vercel.app` addresses still serve the site but send `X-Robots-Tag: noindex, nofollow` (`proxy.ts`), so only the real domain gets indexed. Staging mode (`SITE_STAGING=1`) still exists to take the whole site out of search if ever needed.
 
 ## Owner data: what's in, what's missing
 
@@ -67,7 +69,7 @@ In `content/business.ts`: brand, phone, email, founder (Joseph Davis), years (15
 
 **Visitors never see a placeholder.** Every component checks `known()` and leaves out a fact that hasn't been supplied (license, insurance, hours, case notes). `npm run qc` still lists every missing value.
 
-Still missing: `{{DOMAIN}}` (keeps the site in noindex staging mode), `{{LICENSE_TYPE}}` `{{LICENSE_NUMBER}}`, `{{INSURANCE}}`, `{{HOURS}}`, `{{GBP_URL}}` and other listings, `{{REVIEWER_NAME}}`, `{{PRICE_RANGES}}`, job stories with photos for the other 6 services, Joseph's photo, and the privacy policy's processors/retention details (legal review).
+Still missing: `{{LICENSE_TYPE}}` `{{LICENSE_NUMBER}}`, `{{INSURANCE}}`, `{{HOURS}}`, `{{GBP_URL}}` and other listings, `{{REVIEWER_NAME}}`, `{{PRICE_RANGES}}`, job stories with photos for the other 6 services, Joseph's photo, and the privacy policy's processors/retention details (legal review).
 
 - `{/* OWNER-CONFIRM */}` comments in each MDX file mark statements about how the business works. Check them against reality before launch.
 - Quote form email: set `RESEND_API_KEY`, `QUOTE_TO_EMAIL`, `QUOTE_FROM_EMAIL` in Vercel. Until then the form tells visitors to call instead of pretending to send.
