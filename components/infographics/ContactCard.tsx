@@ -1,4 +1,4 @@
-import { business, countyList, mailHref, telHref } from "@/content/business";
+import { business, countyList, known, mailHref, telHref } from "@/content/business";
 import { PhoneIcon } from "../Icons";
 
 /** Phone, email, hours and coverage, straight from business.ts. Service-area business: no address. */
@@ -15,8 +15,12 @@ export function ContactCard() {
       <div className="panel p-5">
         <span className="block text-sm text-frame-soft">Email</span>
         <a href={mailHref} className="break-all font-semibold">{business.email}</a>
-        <span className="mt-2 block text-sm text-frame-soft">Hours</span>
-        <span>{business.hoursText}</span>
+        {known(business.hoursText) && (
+          <>
+            <span className="mt-2 block text-sm text-frame-soft">Hours</span>
+            <span>{business.hoursText}</span>
+          </>
+        )}
       </div>
       <div className="panel p-5 sm:col-span-2">
         <span className="block text-sm text-frame-soft">Where we work</span>

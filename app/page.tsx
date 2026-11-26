@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { business, countyList, telHref } from "@/content/business";
+import { business, countyList, known, telHref } from "@/content/business";
 import { pageBySlug } from "@/content/pages";
 import { services } from "@/content/services";
 import { faqsFor } from "@/lib/faqs";
 import { metadataFor } from "@/lib/meta";
 import { graphFor } from "@/lib/schema";
 import { CtaBand, Faq, JsonLd } from "@/components/Bits";
-import { ArrowIcon, BadgeIcon, ClockIcon, PhoneIcon, PinIcon, ShieldIcon } from "@/components/Icons";
+import { ArrowIcon, BadgeIcon, CheckIcon, ClockIcon, PhoneIcon, PinIcon, RulerIcon, ShieldIcon } from "@/components/Icons";
+import { JosephSays } from "@/components/Expert";
 import { QuoteForm } from "@/components/QuoteForm";
 import { ServiceArt } from "@/components/ServiceArt";
 import Body from "@/content/pages/home.mdx";
@@ -37,7 +38,14 @@ const STEPS = [
 
 export default function Home() {
   const faqs = faqsFor("");
+  // Owner-supplied facts only. License and insurance cards appear once those details exist.
   const features = [
+    {
+      Icon: ClockIcon,
+      t: `${business.yearsInBusiness} years on sliding doors`,
+      d: <>Founded by {business.founderName}, with {business.yearsInBusiness} years of sliding door work across {business.region}.</>,
+      show: true,
+    },
     {
       Icon: BadgeIcon,
       t: "Licensed in Florida",
@@ -49,15 +57,25 @@ export default function Home() {
           </a>
         </>
       ),
+      show: known(business.licenseNumber),
     },
-    { Icon: ShieldIcon, t: "Insured", d: <>{business.insurance}</> },
-    { Icon: PinIcon, t: business.region, d: <>{countyList}. Salt air, sand and hurricane season are what doors here deal with.</> },
+    { Icon: ShieldIcon, t: "Insured", d: <>{business.insurance}</>, show: known(business.insurance) },
     {
-      Icon: ClockIcon,
-      t: `${business.yearsInBusiness} years on sliding doors`,
-      d: <>Founded by {business.founderName}, with {business.yearsInBusiness} years of sliding door work across {business.region}.</>,
+      Icon: CheckIcon,
+      t: "An honest repair-or-replace call",
+      d: <>If a new door is the better value, you&apos;ll hear that. If new rollers will do it, you&apos;ll hear that too.</>,
+      show: true,
     },
-  ];
+    {
+      Icon: RulerIcon,
+      t: "Parts matched by measurement",
+      d: <>Rollers and locks are matched to your door&apos;s exact specs, not picked by how they look.</>,
+      show: true,
+    },
+    { Icon: PinIcon, t: business.region, d: <>{countyList}. Salt air, sand and humidity are what doors here deal with.</>, show: true },
+  ]
+    .filter((f) => f.show)
+    .slice(0, 4);
 
   return (
     <>
@@ -200,6 +218,30 @@ export default function Home() {
               </Link>
             </li>
           </ul>
+        </div>
+      </section>
+
+      {/* ---------- Meet the founder ---------- */}
+      <section aria-labelledby="founder-heading" className="mx-auto max-w-6xl px-4 pt-16 sm:px-6 sm:pt-20">
+        <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+          <div>
+            <p className="config-label">THE FOUNDER</p>
+            <h2 id="founder-heading" className="mt-2 text-[clamp(1.9rem,1.4rem+1.8vw,2.6rem)] font-extrabold">
+              {business.yearsInBusiness} years of sliding doors, one specialty
+            </h2>
+            <p className="mt-4 text-lg text-frame-soft">
+              {business.founderName} started out learning how sliding doors are built and why they fail, then spent years on roller swaps, track repairs, lock
+              adjustments and full restorations before founding {business.brandName}. The company does one thing: sliding doors, in {countyList}.
+            </p>
+            <Link href="/about" className="mt-5 inline-flex items-center gap-2 font-bold text-teal no-underline hover:underline">
+              More about {business.founderName.split(" ")[0]} and the company <ArrowIcon className="h-4 w-4" />
+            </Link>
+          </div>
+          <JosephSays>
+            <p>
+              I&apos;m always honest with customers about whether a repair makes financial sense. I don&apos;t believe in recommending a repair just to get a job.
+            </p>
+          </JosephSays>
         </div>
       </section>
 

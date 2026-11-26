@@ -3,7 +3,8 @@ import { ClosetTypes } from "./ClosetTypes";
 import { BrandName, ContactCard, Counties, Email, Founder, Phone, PolicyContact, Years } from "./ContactCard";
 import { MeshTable } from "./MeshTable";
 import { PatioDoorTypes } from "./PatioDoorTypes";
-import { ConfigDiagram, LicenseLine, RepairReplaceMatrix } from "./ReplaceDecision";
+import { ConfigDiagram, InsuranceLine, LicenseLine, RepairReplaceMatrix } from "./ReplaceDecision";
+import { JosephSays } from "../Expert";
 import { RollerGuide } from "./RollerGuide";
 import { SecurityLayers } from "./SecurityLayers";
 import { ServiceAreas } from "./ServiceAreas";
@@ -21,6 +22,8 @@ export const infographics = {
   PolicyContact,
   ClosetTypes,
   ConfigDiagram,
+  InsuranceLine,
+  JosephSays,
   LicenseLine,
   MeshTable,
   PatioDoorTypes,

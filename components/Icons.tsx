@@ -35,3 +35,9 @@ export const CameraIcon = ({ className = "h-4 w-4" }: IconProps) => (
 export const ArrowIcon = ({ className = "h-4 w-4" }: IconProps) => (
   <svg viewBox="0 0 24 24" className={className} aria-hidden="true" focusable="false"><path d="M5 12h13M13 6.5l5.5 5.5-5.5 5.5" {...line} /></svg>
 );
+export const CheckIcon = ({ className = "h-4 w-4" }: IconProps) => (
+  <svg viewBox="0 0 24 24" className={className} aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" {...line} /><path d="M8 12.3l2.7 2.7L16.2 9.5" {...line} /></svg>
+);
+export const RulerIcon = ({ className = "h-4 w-4" }: IconProps) => (
+  <svg viewBox="0 0 24 24" className={className} aria-hidden="true" focusable="false"><rect x="2.5" y="8" width="19" height="8" rx="1.2" {...line} /><path d="M6.5 8v3M10 8v4.5M13.5 8v3M17 8v4.5" {...line} /></svg>
+);

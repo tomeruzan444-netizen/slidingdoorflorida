@@ -61,18 +61,17 @@ Vercel project `slidingdoorflorida` (team tomer7), linked to this repo: every pu
 
 While `business.domain` is still a placeholder (or `SITE_STAGING=1`), the site runs in staging mode: `noindex, nofollow` meta tag and `X-Robots-Tag` header, robots.txt blocks everything, and the placeholder check only warns. Filling in the real domain turns staging off and makes placeholders fail the production build again.
 
-## Remaining placeholders (waiting on the owner)
+## Owner data: what's in, what's missing
 
-All in `content/business.ts` unless noted:
+In `content/business.ts`: brand, phone, email, founder (Joseph Davis), years (15), service-area business with 15 cities in 3 counties, one real job story. Joseph's interview answers are recorded verbatim in `briefs/site-pages-facts.md` section E and quoted on pages through `<JosephSays>` (trim, never reword).
 
-`{{BRAND_NAME}}` `{{DOMAIN}}` `{{PHONE}}` `{{EMAIL}}` `{{ADDRESS}}` `{{SERVICE_AREA_TYPE}}` `{{LICENSE_TYPE}}` `{{LICENSE_NUMBER}}` `{{INSURANCE}}` `{{YEARS_IN_BUSINESS}}` `{{FOUNDER_NAME}}` `{{REVIEWER_NAME}}` `{{REVIEWER_ROLE}}` `{{HOURS}}` `{{SERVICE_AREAS}}` `{{GBP_URL}}` `{{SOCIAL_URLS}}` `{{PRICE_RANGES}}` `{{CASE_NOTES}}`
+**Visitors never see a placeholder.** Every component checks `known()` and leaves out a fact that hasn't been supplied (license, insurance, hours, case notes). `npm run qc` still lists every missing value.
 
-Plus:
-- `{{CASE_NOTE}}` boxes on all 7 service pages (real job stories with photos)
-- `about.mdx`: founder bio, team, insurance wording, list of jobs turned down
-- `privacy-policy.mdx`: `{{OTHER_PROCESSORS}}`, `{{RETENTION}}`, analytics and call-tracking notes; needs legal review
-- `{/* OWNER-CONFIRM */}` comments in each MDX file mark statements about how the business works (scope, visit process, time on site). Check them against reality before launch.
+Still missing: `{{DOMAIN}}` (keeps the site in noindex staging mode), `{{LICENSE_TYPE}}` `{{LICENSE_NUMBER}}`, `{{INSURANCE}}`, `{{HOURS}}`, `{{GBP_URL}}` and other listings, `{{REVIEWER_NAME}}`, `{{PRICE_RANGES}}`, job stories with photos for the other 6 services, Joseph's photo, and the privacy policy's processors/retention details (legal review).
+
+- `{/* OWNER-CONFIRM */}` comments in each MDX file mark statements about how the business works. Check them against reality before launch.
 - Quote form email: set `RESEND_API_KEY`, `QUOTE_TO_EMAIL`, `QUOTE_FROM_EMAIL` in Vercel. Until then the form tells visitors to call instead of pretending to send.
+- Pages carry a "With field notes from Joseph Davis" byline, not "Reviewed by". Switch to a review byline only after Joseph has actually read and approved each page.
 
 ## Lighthouse (mobile, local production build, 2026-11-26)
 

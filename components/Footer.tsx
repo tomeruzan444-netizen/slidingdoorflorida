@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { business, countyList, mailHref, telHref } from "@/content/business";
+import { business, countyList, known, mailHref, telHref } from "@/content/business";
 import { services } from "@/content/services";
 import { cityHref } from "@/lib/areas";
 import { LogoMark } from "./Logo";
@@ -32,13 +32,16 @@ export function Footer() {
               </a>
             </li>
           </ul>
-          <p className="mt-5 text-sm leading-relaxed text-alu-light">
-            {business.licenseType} license #{business.licenseNumber}
-            <br />
-            {business.insurance}
-            <br />
-            Hours: {business.hoursText}
-          </p>
+          <ul className="mt-5 space-y-1 text-sm leading-relaxed text-alu-light">
+            <li>Founded by {business.founderName}. {business.yearsInBusiness} years on sliding doors.</li>
+            {known(business.licenseNumber) && (
+              <li>
+                {business.licenseType} license #{business.licenseNumber}
+              </li>
+            )}
+            {known(business.insurance) && <li>{business.insurance}</li>}
+            {known(business.hoursText) && <li>Hours: {business.hoursText}</li>}
+          </ul>
         </div>
 
         <div>

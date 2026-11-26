@@ -1,4 +1,4 @@
-import { business, countyList, serviceCities, siteUrl } from "@/content/business";
+import { business, countyList, known, serviceCities, siteUrl } from "@/content/business";
 import { pages, pathFor } from "@/content/pages";
 
 export const dynamic = "force-static";
@@ -9,7 +9,7 @@ export function GET() {
   const body = [
     `# ${business.brandName}`,
     "",
-    `> ${business.about} Service area: ${countyList}, Florida. Phone: ${business.phone}. Email: ${business.email}. License: ${business.licenseType} #${business.licenseNumber}.`,
+    `> ${business.about} Service area: ${countyList}, Florida. Phone: ${business.phone}. Email: ${business.email}.${known(business.licenseNumber) ? ` License: ${business.licenseType} #${business.licenseNumber}.` : ""}`,
     "",
     "## Services",
     ...services.map((p) => `- [${p.h1}](${siteUrl}${pathFor(p.slug)}): ${p.description}`),

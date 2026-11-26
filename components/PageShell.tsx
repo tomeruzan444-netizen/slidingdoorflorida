@@ -5,6 +5,7 @@ import { faqsFor } from "@/lib/faqs";
 import { graphFor } from "@/lib/schema";
 import { Breadcrumbs, CtaBand, Faq, JsonLd, ReviewLine, TrustStrip } from "./Bits";
 import { Sidebar } from "./Sidebar";
+import { ExpertByline } from "./Expert";
 import { PhoneIcon } from "./Icons";
 
 type Props = {
@@ -41,6 +42,7 @@ export function PageShell({ page, children, faqHeading, closing }: Props) {
               <div className="max-w-4xl"><TrustStrip /></div>
             </>
           )}
+          {isService && <ExpertByline />}
         </div>
       </div>
 

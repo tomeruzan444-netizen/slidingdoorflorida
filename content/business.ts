@@ -10,7 +10,7 @@
 export type CaseNote = {
   service: string; // service slug
   title: string;
-  location: string; // city or area, as approved by the owner
+  location?: string; // city or area, only if the owner gave one
   story: string; // what was wrong, what we found, what we did
   beforeImage?: string; // path under /public, real job photo only
   afterImage?: string;
@@ -91,12 +91,25 @@ export const business = {
   /** Only filled if the owner approves publishing price ranges. */
   priceRanges: "{{PRICE_RANGES}}",
 
-  /** Real job stories with real photos ({{CASE_NOTES}}). Empty until the owner supplies them. */
-  caseNotes: [] as CaseNote[],
+  /**
+   * Real job stories told by the owner. Never invent one.
+   * Owner interview, 2026-11-26 (briefs/site-pages-facts.md, section E). No city or photos given yet.
+   */
+  caseNotes: [
+    {
+      service: "sliding-door-roller-replacement",
+      title: "The door the homeowner was ready to replace",
+      story:
+        "The door barely moved, and the homeowner assumed the frame was damaged and the whole door had to go. The frame was fine. The rollers were worn out, and years of dirt and debris had built up in the track. Joseph replaced the rollers, cleaned the track and adjusted the panel, and once everything lined up the door slid smoothly again. The homeowner kept the door they had.",
+    },
+  ] as CaseNote[],
 } as const;
 
 export const isPlaceholder = (v: unknown): boolean =>
   typeof v === "string" && /\{\{[A-Z_]+\}\}/.test(v);
+
+/** True when the owner has supplied this value. Visitor-facing UI renders a fact only when it's known. */
+export const known = (v: unknown): boolean => v !== undefined && v !== null && v !== "" && !isPlaceholder(v);
 
 /** Site URL used for canonicals, sitemap and schema. */
 export const siteUrl = (

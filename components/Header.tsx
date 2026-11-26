@@ -1,21 +1,41 @@
 import Link from "next/link";
-import { business, telHref } from "@/content/business";
+import { business, countyList, known, telHref } from "@/content/business";
 import { services } from "@/content/services";
 import { Logo } from "./Logo";
-import { BadgeIcon, ChevronIcon, ClockIcon, MenuIcon, PhoneIcon } from "./Icons";
+import { BadgeIcon, ChevronIcon, ClockIcon, MenuIcon, PhoneIcon, PinIcon } from "./Icons";
 
 /** Thin info bar above the header. Every value comes from business.ts (placeholders until the owner fills them in). */
 export function TopBar() {
+  const hasLicense = known(business.licenseNumber);
+  const hasHours = known(business.hoursText);
   return (
     <div className="bg-teal-deep text-[0.92rem] text-white">
       <div className="mx-auto flex h-10 max-w-6xl items-center justify-center gap-6 px-4 sm:justify-between sm:px-6">
         <p className="hidden items-center gap-2 sm:flex">
-          <BadgeIcon className="h-4 w-4 text-sea" />
-          <span>Florida {business.licenseType} #{business.licenseNumber}</span>
+          {hasLicense ? (
+            <>
+              <BadgeIcon className="h-4 w-4 text-sea" />
+              <span>Florida {business.licenseType} #{business.licenseNumber}</span>
+            </>
+          ) : (
+            <>
+              <PinIcon className="h-4 w-4 text-sea" />
+              <span>Serving {countyList}</span>
+            </>
+          )}
         </p>
         <p className="flex items-center gap-5">
-          <span className="flex items-center gap-2">
-            <ClockIcon className="h-4 w-4 text-sea" /> {business.hoursText}
+          {hasHours ? (
+            <span className="flex items-center gap-2">
+              <ClockIcon className="h-4 w-4 text-sea" /> {business.hoursText}
+            </span>
+          ) : (
+            <span className="flex items-center gap-2 sm:hidden">
+              <PinIcon className="h-4 w-4 text-sea" /> {business.region}
+            </span>
+          )}
+          <span className="hidden items-center gap-2 md:flex">
+            {business.yearsInBusiness} years on sliding doors
           </span>
           <a href={telHref} className="hidden items-center gap-2 font-semibold text-white no-underline hover:underline md:flex">
             <PhoneIcon className="h-4 w-4 text-sea" /> {business.phone}

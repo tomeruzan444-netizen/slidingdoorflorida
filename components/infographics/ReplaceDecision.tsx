@@ -1,4 +1,4 @@
-import { business } from "@/content/business";
+import { business, known } from "@/content/business";
 
 /** Repair-or-replace decision matrix. */
 const ROWS: [string, string, string][] = [
@@ -97,9 +97,16 @@ export function ConfigDiagram() {
 
 /** The business's own license line, from business.ts. */
 export function LicenseLine() {
+  if (!known(business.licenseNumber)) return null;
   return (
     <p className="rounded border border-alu bg-sea-soft px-4 py-3">
       Our license: <strong>{business.licenseType}</strong>, license number <strong>{business.licenseNumber}</strong>.
     </p>
   );
+}
+
+/** Insurance wording, shown only once the owner supplies it. */
+export function InsuranceLine() {
+  if (!known(business.insurance)) return null;
+  return <p>Insurance: {business.insurance}.</p>;
 }
