@@ -48,8 +48,8 @@
     ],
     "sliding-door-roller-replacement": [
       {
-        "q": "Can I replace sliding glass door rollers myself?",
-        "a": "Often, yes, if you have a helper and the right part. The glass panel usually has to be lifted out of the frame, and that's dangerous to do alone. Heavy impact panels are best left to a pro."
+        "q": "Is changing sliding door rollers a two-person job?",
+        "a": "Yes, in most cases. The glass panel usually has to be lifted out of the frame, and that's dangerous to do alone. With a helper and the right part it's doable, but heavy impact panels are best left to a pro."
       },
       {
         "q": "How do I know if my sliding door rollers are bad?",
@@ -160,7 +160,7 @@
         "a": "Measure the distance between the two mounting screw holes, center to center. Common sizes include 3-15/16, 4-15/16 and 6-5/8 inches. Also measure the panel thickness, since each handle set fits a limited range."
       },
       {
-        "q": "Are sliding door handles universal?",
+        "q": "Will any replacement handle fit my sliding glass door?",
         "a": "No. Handles vary in screw spacing, panel thickness range, and whether they work a separate mortise lock or have the hook built in. A handle that fits your holes can still fail to work your lock if the lever doesn't match."
       },
       {
@@ -240,7 +240,7 @@
     ],
     "sliding-closet-door-repair": [
       {
-        "q": "Why does my sliding closet door keep coming off the track?",
+        "q": "What makes a mirrored closet door slip out of its track?",
         "a": "On mirror doors that roll on the floor, the door usually sits too low to stay captured in the top channel. On top-hung doors, look for a worn hanger wheel, a loose hanger screw, or a missing floor guide letting the bottom swing."
       },
       {
@@ -445,7 +445,7 @@
     "sliding-glass-door-repair-miramar": [
       {
         "q": "Why does Miramar make me sign an HOA affidavit if I'm not in an HOA?",
-        "a": "Because the city code requires it from every applicant. Under City Code section 22-29(c)(1), you confirm you understand an association may add rules despite a city permit. If your home isn't in one, you initial the statement saying so and the affidavit is still filed."
+        "a": "Because the city requires it from every applicant. On it, you confirm you understand an association may add rules despite a city permit. If your home isn't in one, you initial the statement saying so and the affidavit is still filed."
       },
       {
         "q": "Does Miramar accept a Florida product approval or only a Miami-Dade NOA?",
@@ -681,7 +681,7 @@
       },
       {
         "q": "Why does Boca Raton ask for water testing on some new doors?",
-        "a": "Because the building code requires it for doors that don't meet certain exceptions. The city's window and door schedule says doors not meeting exceptions 1 and 2 of Florida Building Code sections 1709.5.1 and R609.3 must be tested for water infiltration. The door's product documents show which applies."
+        "a": "Because the building code requires it for doors that don't meet certain exceptions. Doors that don't fall under those exceptions must be tested for water infiltration before the city accepts them. The door's product documents show which applies."
       }
     ],
     "sliding-glass-door-repair-west-palm-beach": [

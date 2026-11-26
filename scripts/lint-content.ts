@@ -93,7 +93,7 @@ const OWN_HOSTS = /^(https?:\/\/)?(www\.)?(davisslidingdoorflorida\.com|schema\.
 const EXTERNAL_URL = /https?:\/\/[^\s"'`)<>\\]+/gi;
 const BARE_DOMAIN = /\b[a-z0-9-]+\.(com|gov|org|net|edu|io|us)\b/gi;
 const SOURCE_NAMES = /\b(census|american community survey|noaa|national hurricane center|fema|jeld-?wen|loewen|phifer|tuffscreen|petscreen|suntex|pgt|cgi|marvin|multislide|slimfold|contractors wardrobe|andersen|pella|milgard|building america|department of energy|irs|nfrc|fgia|aama|ansi|cpsc|dbpr|myfloridalicense|floridabuilding|up\.codes|building commission|police department|visitor bureau|home depot|lowe'?s|yelp|angi|homeadvisor|thumbtack|houzz|reddit|wikipedia)\b/i;
-const CITATION = /\b(\d+ cfr \d+|florida statutes|section \d+\.\d+|rule \d+[a-z]\d*-|sources?:|according to (the )?(census|city's|county's|a |an ))/i;
+const CITATION = /\b(\d+ cfr \d+|florida statutes|sections? [0-9R][0-9]*[.\-][0-9]|\b\d+-\d+\([a-z0-9]+\)|rule \d+[a-z]\d*-|sources?:|according to (the )?(census|city's|county's|a |an ))/i;
 
 function lintSourcesAndLinks(where: string, raw: string, issues: Issue[]) {
   for (const m of raw.match(EXTERNAL_URL) ?? []) {
