@@ -59,7 +59,7 @@ URLs are flat: every page sits directly under the domain. Trailing-slash URLs 30
 
 - Every city page links to 2-4 pages in its body: a neighboring city (south-to-north ring in `lib/sidebar.ts`) and 1-2 service pages. Each city also gets a contextual link from a relevant service page. QC enforces 2-4 out and 2+ in.
 - The footer links a city only when its page exists (`lib/areas.ts`).
-- Owner request: city pages carry the three "near me" phrases verbatim, once each, body only. The linter enforces that exception; "near me" anywhere else still fails.
+- "Near me" is never written anywhere on the site (owner rule, 2026-11-26). The linter fails the build on it.
 - BUILD-PROMPT section 10 also asks for a real local job story per city. None exists yet; add one per city when the owner supplies it.
 - Some facts were read from official pages through search results because the sites block automated fetches (marked in each brief). Open those in a browser before relying on them.
 

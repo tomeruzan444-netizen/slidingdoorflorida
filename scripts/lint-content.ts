@@ -119,22 +119,8 @@ export function lintContent(): Issue[] {
   lintSourcesAndLinks("app/page.tsx", readFileSync(join(ROOT, "app/page.tsx"), "utf8"), issues);
   for (const p of allPages) {
     const where = p.slug || "home";
-    // Owner request (2026-11-26): city pages carry the three "near me" search phrases, once each, body only.
-    const isCity = p.kind === "city";
-    lintText(`${where} (body)`, bodyText(p), issues, { overuse: true, allowNearMe: isCity });
-    if (isCity) {
-      const body = bodyText(p).toLowerCase();
-      const allowed = ["sliding glass door repair near me", "sliding door repair near me", "patio door repair near me"];
-      let rest = body;
-      for (const ph of allowed) {
-        const re = new RegExp(`\\b${ph}\\b`, "g");
-        const n = (rest.match(re) ?? []).length;
-        if (n > 1) issues.push({ level: "error", check: "lint", msg: `${where}: "${ph}" used ${n} times (max 1)` });
-        rest = rest.replace(re, " ");
-      }
-      if (/near me/.test(rest)) issues.push({ level: "error", check: "lint", msg: `${where}: "near me" outside the three approved phrases` });
-      if (/^#{2,4}.*near me/im.test(readMdx(p.slug))) issues.push({ level: "error", check: "lint", msg: `${where}: "near me" in a heading` });
-    }
+    // Owner rule (2026-11-26, updated): "near me" is never written anywhere on the site, city pages included.
+    lintText(`${where} (body)`, bodyText(p), issues, { overuse: true });
     lintText(`${where} (meta)`, [p.metaTitle, p.description, p.h1, p.subline, p.faqHeading ?? "", p.closing ?? ""].join(" \n "), issues, { overuse: false });
     lintHeadings(where, readMdx(p.slug), issues);
     if (p.metaTitle.length > 62) issues.push({ level: "warn", check: "lint", msg: `${where}: title is ${p.metaTitle.length} chars (target ~60)` });
