@@ -19,7 +19,7 @@ type Status = { kind: "idle" | "sending" | "ok" | "error"; message?: string };
 /** Florida ZIP codes fall in the 32000-34999 range. */
 const FL_ZIP = /^3[2-4]\d{3}$/;
 
-export function QuoteForm() {
+export function QuoteForm({ wide = false }: { wide?: boolean } = {}) {
   const [status, setStatus] = useState<Status>({ kind: "idle" });
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -111,7 +111,7 @@ export function QuoteForm() {
       <button
         type="submit"
         disabled={status.kind === "sending"}
-        className="rounded bg-bronze px-6 py-3 font-semibold text-white hover:bg-bronze-dark disabled:opacity-60"
+        className={`rounded-md bg-bronze px-6 py-3.5 text-lg font-bold text-white shadow-sm transition hover:bg-bronze-dark disabled:opacity-60 ${wide ? "w-full" : ""}`}
       >
         {status.kind === "sending" ? "Sending..." : "Send request"}
       </button>

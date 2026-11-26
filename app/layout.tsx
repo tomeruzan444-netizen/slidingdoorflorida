@@ -1,15 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Source_Sans_3, Space_Grotesk } from "next/font/google";
+import { Assistant } from "next/font/google";
 import { business, isStaging, siteUrl } from "@/content/business";
-import { Header } from "@/components/Header";
+import { Header, TopBar } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileCallBar } from "@/components/MobileCallBar";
 import "./globals.css";
 
-// next/font self-hosts these. "optional" avoids a late font swap repainting the hero (protects LCP);
-// the fallback is metric-adjusted, so a first visit on a slow connection still looks right.
-const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk", display: "optional", weight: ["500", "600", "700"] });
-const body = Source_Sans_3({ subsets: ["latin"], variable: "--font-source-sans", display: "optional" });
+// next/font self-hosts Assistant (variable font, one file for every weight).
+// "optional" avoids a late font swap repainting the hero (protects LCP); the fallback is metric-adjusted.
+const assistant = Assistant({ subsets: ["latin"], variable: "--font-assistant", display: "optional" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -26,8 +25,9 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-US" className={`${display.variable} ${body.variable}`}>
+    <html lang="en-US" className={assistant.variable}>
       <body>
+        <TopBar />
         <Header />
         <main id="main">{children}</main>
         <Footer />
