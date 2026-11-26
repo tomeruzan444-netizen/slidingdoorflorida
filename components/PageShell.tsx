@@ -18,7 +18,7 @@ type Props = {
 /** Layout for every page except the homepage: hero, answer block, body + sidebar, FAQ, closing CTA. */
 export function PageShell({ page, children, faqHeading, closing }: Props) {
   const faqs = faqsFor(page.slug);
-  const isService = page.kind === "service";
+  const isService = page.kind === "service" || page.kind === "city";
   const showRelated = isService || page.slug === "about" || page.slug === "contact";
   return (
     <>

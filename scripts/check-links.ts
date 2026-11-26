@@ -43,5 +43,13 @@ export function checkLinks(): Issue[] {
     }
     if (!from.has("/")) issues.push({ level: "error", check: "links", msg: `${path} is not linked from the homepage body` });
   }
+  // City pages: 2-4 contextual links out, and at least 2 contextual links in (a neighboring city and a service page).
+  for (const p of allPages.filter((p) => p.kind === "city")) {
+    const path = pathFor(p.slug);
+    const out = new Set(contextualLinks(readMdx(p.slug)).filter((l) => l !== path));
+    if (out.size < 2 || out.size > 4) issues.push({ level: "error", check: "links", msg: `${path} has ${out.size} contextual internal links (need 2-4)` });
+    const from = inbound.get(path) ?? new Set();
+    if (from.size < 2) issues.push({ level: "error", check: "links", msg: `orphan: ${path} has ${from.size} contextual inbound link(s) (need 2)` });
+  }
   return issues;
 }

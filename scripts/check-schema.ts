@@ -45,7 +45,7 @@ export function checkSchema(): Issue[] {
     }
     const types = nodes.map((n) => n["@type"]);
     if (p.kind === "home" && !types.includes("HomeAndConstructionBusiness")) issues.push({ level: "error", check: "schema", msg: "home: missing LocalBusiness" });
-    if (p.kind === "service" && !types.includes("Service")) issues.push({ level: "error", check: "schema", msg: `${where}: missing Service` });
+    if ((p.kind === "service" || p.kind === "city") && !types.includes("Service")) issues.push({ level: "error", check: "schema", msg: `${where}: missing Service` });
     if (p.kind !== "home" && !types.includes("BreadcrumbList")) issues.push({ level: "error", check: "schema", msg: `${where}: missing BreadcrumbList` });
   }
   return issues;

@@ -53,7 +53,15 @@ URLs are flat: every page sits directly under the domain. Trailing-slash URLs 30
 4. Add a new, useful sentence linking to it on the 1-2 closest existing pages, update their `updated` date, and update `related` in `services.ts`.
 5. `npm run qc`, then `npx tsx scripts/brief-links.ts` to refresh the link map in the briefs.
 
-City pages follow BUILD-PROMPT section 10: no city page without 5+ verified local facts and a real local job story.
+## City pages (15)
+
+`/sliding-glass-door-repair-{city}` for the 15 footer cities (kind `"city"` in `content/pages.ts`). Each has a research brief with verified local facts and sources in `briefs/cities/{slug}.md`, and its metadata and 5 local FAQs in `briefs/cities/{slug}.meta.json`. `python scripts/add-city-pages.py` re-registers them in `pages.ts` and `faq-registry.json` after editing a meta file.
+
+- Every city page links to 2-4 pages in its body: a neighboring city (south-to-north ring in `lib/sidebar.ts`) and 1-2 service pages. Each city also gets a contextual link from a relevant service page. QC enforces 2-4 out and 2+ in.
+- The footer links a city only when its page exists (`lib/areas.ts`).
+- Owner request: city pages carry the three "near me" phrases verbatim, once each, body only. The linter enforces that exception; "near me" anywhere else still fails.
+- BUILD-PROMPT section 10 also asks for a real local job story per city. None exists yet; add one per city when the owner supplies it.
+- Some facts were read from official pages through search results because the sites block automated fetches (marked in each brief). Open those in a browser before relying on them.
 
 ## Live address
 

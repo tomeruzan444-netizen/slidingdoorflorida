@@ -69,26 +69,26 @@ export const business = {
   serviceAreas: [
     {
       county: "Miami-Dade County",
-      cities: [{ name: "Miami" }, { name: "Hialeah" }, { name: "Miami Gardens" }],
+      cities: [{ name: "Miami", page: "sliding-glass-door-repair-miami" }, { name: "Hialeah", page: "sliding-glass-door-repair-hialeah" }, { name: "Miami Gardens", page: "sliding-glass-door-repair-miami-gardens" }],
     },
     {
       county: "Broward County",
       cities: [
-        { name: "Fort Lauderdale" },
-        { name: "Pembroke Pines" },
-        { name: "Hollywood" },
-        { name: "Miramar" },
-        { name: "Coral Springs" },
-        { name: "Pompano Beach" },
-        { name: "Davie" },
-        { name: "Plantation" },
-        { name: "Sunrise" },
-        { name: "Deerfield Beach" },
+        { name: "Fort Lauderdale", page: "sliding-glass-door-repair-fort-lauderdale" },
+        { name: "Pembroke Pines", page: "sliding-glass-door-repair-pembroke-pines" },
+        { name: "Hollywood", page: "sliding-glass-door-repair-hollywood" },
+        { name: "Miramar", page: "sliding-glass-door-repair-miramar" },
+        { name: "Coral Springs", page: "sliding-glass-door-repair-coral-springs" },
+        { name: "Pompano Beach", page: "sliding-glass-door-repair-pompano-beach" },
+        { name: "Davie", page: "sliding-glass-door-repair-davie" },
+        { name: "Plantation", page: "sliding-glass-door-repair-plantation" },
+        { name: "Sunrise", page: "sliding-glass-door-repair-sunrise" },
+        { name: "Deerfield Beach", page: "sliding-glass-door-repair-deerfield-beach" },
       ],
     },
     {
       county: "Palm Beach County",
-      cities: [{ name: "West Palm Beach" }, { name: "Boca Raton" }],
+      cities: [{ name: "West Palm Beach", page: "sliding-glass-door-repair-west-palm-beach" }, { name: "Boca Raton", page: "sliding-glass-door-repair-boca-raton" }],
     },
   ] as ServiceCounty[],
 

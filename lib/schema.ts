@@ -106,6 +106,24 @@ export function serviceSchema(page: PageEntry): Json {
   };
 }
 
+export function cityServiceSchema(page: PageEntry): Json {
+  const c = page.city!;
+  return {
+    "@type": "Service",
+    "@id": `${siteUrl}${pathFor(page.slug)}#service`,
+    name: `Sliding glass door repair in ${c.name}`,
+    serviceType: "Sliding glass door repair",
+    description: page.description,
+    url: `${siteUrl}${pathFor(page.slug)}`,
+    provider: { "@id": ids.business },
+    areaServed: {
+      "@type": "City",
+      name: `${c.name}, FL`,
+      containedInPlace: { "@type": "AdministrativeArea", name: `${c.county}, FL` },
+    },
+  };
+}
+
 export function homeServiceSchema(page: PageEntry): Json {
   return {
     "@type": "Service",
@@ -158,6 +176,7 @@ export function graphFor(page: PageEntry, faqs: Faq[]): Json {
   const graph: Json[] = [organizationSchema(), websiteSchema(), webPageSchema(page)];
   if (page.kind === "home") graph.push(localBusinessSchema(), homeServiceSchema(page));
   if (page.kind === "service") graph.push(serviceSchema(page));
+  if (page.kind === "city" && page.city) graph.push(cityServiceSchema(page));
   if (page.kind !== "home") graph.push(breadcrumbSchema(page));
   if (faqs.length) graph.push(faqSchema(faqs));
   return { "@context": "https://schema.org", "@graph": graph };

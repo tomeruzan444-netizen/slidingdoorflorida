@@ -25,7 +25,9 @@ export function checkFaqs(): Issue[] {
   }
   for (const p of allPages.filter((p) => p.kind !== "utility")) {
     const n = (map[p.slug || "home"] ?? []).length;
-    if (n < 8 || n > 15) issues.push({ level: "error", check: "faq", msg: `${p.slug || "home"}: ${n} FAQs (need 8-15)` });
+    // City pages carry a short set of local questions; 8-15 near-identical city FAQs would read as doorway pages.
+    const [min, max] = p.kind === "city" ? [4, 8] : [8, 15];
+    if (n < min || n > max) issues.push({ level: "error", check: "faq", msg: `${p.slug || "home"}: ${n} FAQs (need ${min}-${max})` });
   }
   for (let i = 0; i < flat.length; i++) {
     for (let j = i + 1; j < flat.length; j++) {
