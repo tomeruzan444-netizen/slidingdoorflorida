@@ -91,6 +91,13 @@ Still missing: `{{LICENSE_TYPE}}` `{{LICENSE_NUMBER}}`, `{{INSURANCE}}`, `{{HOUR
 
 CLS is 0 everywhere. Observed LCP is about 0.3 s. Lighthouse's simulated mobile LCP is 2.4-2.8 s, above the 2.0 s target. The cause is the JavaScript payload: about 146 KB gzipped of React plus the Next.js App Router runtime, over the 90 KB target. Site code adds only a few KB. Lighthouse models all of it on a throttled CPU. Already done: inlined CSS, self-hosted fonts with `display: optional`, zero-JS menus and FAQ. Meeting both targets fully would mean a framework that ships no runtime by default (Astro, for example). Scores will also differ on Vercel's CDN.
 
+## Crawlability
+
+- Every page: `<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">` (same for googlebot), absolute self-referencing canonical, one H1, valid JSON-LD. No `X-Robots-Tag` on the real domain; `*.vercel.app` hosts send `noindex` so only davisslidingdoorflorida.com is indexed.
+- robots.txt allows everything except `/api/`, names the search and AI crawlers explicitly (Googlebot, Bingbot, Google-Extended, GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, PerplexityBot, Applebot-Extended and others) and points to the sitemap.
+- All pages are static HTML: text, links and schema are in the initial response, no JS needed to read them.
+- `npm run audit:crawl -- https://davisslidingdoorflorida.com` crawls the live site like a search engine (robots, sitemap, status codes, noindex, canonicals, titles, H1, JSON-LD, broken links, orphans, redirects). Run it after every structural change.
+
 ## After launch
 
 1. Connect the domain on Vercel and set `NEXT_PUBLIC_SITE_URL`.

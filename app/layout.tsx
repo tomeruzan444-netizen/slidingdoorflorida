@@ -14,7 +14,18 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: business.brandName,
   formatDetection: { telephone: false },
-  ...(isStaging ? { robots: { index: false, follow: false } } : {}),
+  // Explicit index/follow. max-snippet:-1 and max-image-preview:large let Google (including AI Overviews)
+  // and other engines quote full passages and show large images instead of falling back to defaults.
+  robots: isStaging
+    ? { index: false, follow: false }
+    : {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+        googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large", "max-video-preview": -1 },
+      },
 };
 
 export const viewport: Viewport = {
