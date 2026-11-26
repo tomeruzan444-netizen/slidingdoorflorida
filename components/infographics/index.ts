@@ -5,6 +5,7 @@ import { MeshTable } from "./MeshTable";
 import { PatioDoorTypes } from "./PatioDoorTypes";
 import { ConfigDiagram, InsuranceLine, LicenseLine, RepairReplaceMatrix } from "./ReplaceDecision";
 import { JosephSays } from "../Expert";
+import { PagePhoto } from "../PagePhoto";
 import { RollerGuide } from "./RollerGuide";
 import { SecurityLayers } from "./SecurityLayers";
 import { ServiceAreas } from "./ServiceAreas";
@@ -24,6 +25,7 @@ export const infographics = {
   ConfigDiagram,
   InsuranceLine,
   JosephSays,
+  PagePhoto,
   LicenseLine,
   MeshTable,
   PatioDoorTypes,
