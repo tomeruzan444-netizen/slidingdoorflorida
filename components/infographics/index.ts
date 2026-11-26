@@ -1,6 +1,6 @@
 import { QuoteForm } from "../QuoteForm";
 import { ClosetTypes } from "./ClosetTypes";
-import { BrandName, ContactCard, PolicyContact } from "./ContactCard";
+import { BrandName, ContactCard, Counties, Email, Founder, Phone, PolicyContact, Years } from "./ContactCard";
 import { MeshTable } from "./MeshTable";
 import { PatioDoorTypes } from "./PatioDoorTypes";
 import { ConfigDiagram, LicenseLine, RepairReplaceMatrix } from "./ReplaceDecision";
@@ -12,6 +12,11 @@ import { TrackCrossSection } from "./TrackCrossSection";
 
 export const infographics = {
   BrandName,
+  Counties,
+  Email,
+  Founder,
+  Phone,
+  Years,
   ContactCard,
   PolicyContact,
   ClosetTypes,

@@ -7,8 +7,8 @@ import { MobileCallBar } from "@/components/MobileCallBar";
 import "./globals.css";
 
 // next/font self-hosts Assistant (variable font, one file for every weight).
-// "optional" avoids a late font swap repainting the hero (protects LCP); the fallback is metric-adjusted.
-const assistant = Assistant({ subsets: ["latin"], variable: "--font-assistant", display: "optional" });
+// "swap" guarantees Assistant always renders; the metric-adjusted fallback keeps the swap from shifting layout.
+const assistant = Assistant({ subsets: ["latin"], variable: "--font-assistant", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

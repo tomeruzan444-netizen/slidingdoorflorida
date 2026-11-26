@@ -69,3 +69,20 @@ Practical notes: 3.2.6 Consistent Help maps directly to keeping phone/contact in
 ## Not used / blocked sources
 
 - eCFR (ecfr.gov), fcc.gov consumer pages, www2.myfloridalicense.com content pages: blocked automated fetch (403 / challenge). Cornell LII and govinfo used for CFR text; DBPR search page fetched directly.
+
+## D. Owner-supplied business facts (for /about, /contact, footer, schema)
+
+Supplied by the owner on 2026-11-26. These are business facts, not research: they are published as given and live in `content/business.ts`.
+
+| Fact | Value |
+|---|---|
+| Business name | Davis Sliding Door Repair |
+| Founder | Joseph Davis |
+| Phone | (954) 807-2446, tel:+19548072446 |
+| Email | davisslidingdoorrepair@gmail.com |
+| Years of experience | 15 |
+| Business type | Service-area business, no public street address (no address on the site or in schema) |
+| Owner's description | "Davis Sliding Door Repair is a sliding door repair and installation company founded by Joseph Davis, with 15 years of experience in sliding door services across South Florida." |
+| Service areas | Miami-Dade County: Miami, Hialeah, Miami Gardens. Broward County: Fort Lauderdale, Pembroke Pines, Hollywood, Miramar, Coral Springs, Pompano Beach, Davie, Plantation, Sunrise, Deerfield Beach. Palm Beach County: West Palm Beach, Boca Raton. |
+
+Still missing from the owner: domain, license type and number, insurance wording, hours, Google Business Profile and other listing URLs, technical reviewer, price ranges, job stories with photos, founder bio and photo.

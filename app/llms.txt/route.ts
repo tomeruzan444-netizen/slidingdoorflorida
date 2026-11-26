@@ -1,4 +1,4 @@
-import { business, siteUrl } from "@/content/business";
+import { business, countyList, serviceCities, siteUrl } from "@/content/business";
 import { pages, pathFor } from "@/content/pages";
 
 export const dynamic = "force-static";
@@ -9,7 +9,7 @@ export function GET() {
   const body = [
     `# ${business.brandName}`,
     "",
-    `> Sliding glass door repair and replacement in Florida (Florida only). Phone: ${business.phone}. License: ${business.licenseType} #${business.licenseNumber}.`,
+    `> ${business.about} Service area: ${countyList}, Florida. Phone: ${business.phone}. Email: ${business.email}. License: ${business.licenseType} #${business.licenseNumber}.`,
     "",
     "## Services",
     ...services.map((p) => `- [${p.h1}](${siteUrl}${pathFor(p.slug)}): ${p.description}`),
@@ -18,7 +18,8 @@ export function GET() {
     `- [About](${siteUrl}/about)`,
     `- [Contact and quote](${siteUrl}/contact)`,
     "",
-    `Service areas: ${business.serviceAreas.join(", ")}`,
+    `## Service areas (${serviceCities.length} cities)`,
+    ...business.serviceAreas.map((c) => `- ${c.county}: ${c.cities.map((x) => x.name).join(", ")}`),
     "",
   ].join("\n");
   return new Response(body, { headers: { "Content-Type": "text/plain; charset=utf-8" } });

@@ -20,7 +20,7 @@ export function Logo() {
       <span className="font-[family-name:var(--font-display)] text-[1.05rem] font-semibold leading-tight tracking-tight text-frame">
         {business.brandName}
         <span className="block text-[0.7rem] font-medium uppercase tracking-[0.16em] text-teal">
-          Sliding door repair &middot; Florida
+          {business.region}
         </span>
       </span>
     </span>

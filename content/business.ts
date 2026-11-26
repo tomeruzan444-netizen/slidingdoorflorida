@@ -18,29 +18,38 @@ export type CaseNote = {
 
 export type DayHours = { days: string[]; opens: string; closes: string };
 
-export const business = {
-  brandName: "{{BRAND_NAME}}",
-  domain: "{{DOMAIN}}", // e.g. https://www.example.com (no trailing slash)
-  phone: "{{PHONE}}", // display format, e.g. (305) 555-0100
-  phoneE164: "{{PHONE}}", // tel: format, e.g. +13055550100
-  email: "{{EMAIL}}",
+/**
+ * A city we serve. `page` is the slug of its city page. Leave it empty until that page
+ * is live in content/pages.ts: the footer only links a city whose page exists.
+ */
+export type ServiceCity = { name: string; page?: string };
+export type ServiceCounty = { county: string; cities: ServiceCity[] };
 
-  /** "storefront" shows the street address publicly; "service-area" hides it (GBP rule). */
-  serviceAreaType: "{{SERVICE_AREA_TYPE}}" as "storefront" | "service-area" | string,
-  address: {
-    street: "{{ADDRESS}}",
-    city: "{{ADDRESS}}",
-    region: "FL",
-    postalCode: "{{ADDRESS}}",
-    country: "US",
-  },
+export const business = {
+  brandName: "Davis Sliding Door Repair",
+  domain: "{{DOMAIN}}", // e.g. https://www.example.com (no trailing slash)
+  phone: "(954) 807-2446", // display format
+  phoneE164: "+19548072446", // tel: format
+  email: "davisslidingdoorrepair@gmail.com",
+
+  /**
+   * Service-area business: we go to the customer, and there is no public street address.
+   * No address appears on the site or in the schema. If this ever becomes "storefront",
+   * add the address here and to the footer, contact card and LocalBusiness schema.
+   */
+  serviceAreaType: "service-area" as "storefront" | "service-area",
   geo: { lat: null as number | null, lng: null as number | null },
 
   licenseType: "{{LICENSE_TYPE}}",
   licenseNumber: "{{LICENSE_NUMBER}}",
   insurance: "{{INSURANCE}}",
-  yearsInBusiness: "{{YEARS_IN_BUSINESS}}",
-  founderName: "{{FOUNDER_NAME}}",
+  yearsInBusiness: "15",
+  founderName: "Joseph Davis",
+  /** Owner-approved one-line description (used in llms.txt and the about page). */
+  about:
+    "Davis Sliding Door Repair is a sliding door repair and installation company founded by Joseph Davis, with 15 years of experience in sliding door services across South Florida.",
+  /** Short region name for headlines and labels. */
+  region: "South Florida",
 
   /** Byline is shown only once a real person fills this role. */
   reviewer: { name: "{{REVIEWER_NAME}}", role: "{{REVIEWER_ROLE}}" },
@@ -49,8 +58,32 @@ export const business = {
   hoursText: "{{HOURS}}",
   hours: [] as DayHours[],
 
-  /** Florida counties or cities, exactly as listed on the Google Business Profile. */
-  serviceAreas: ["{{SERVICE_AREAS}}"] as string[],
+  /** Service areas by county. Must match the Google Business Profile. */
+  serviceAreas: [
+    {
+      county: "Miami-Dade County",
+      cities: [{ name: "Miami" }, { name: "Hialeah" }, { name: "Miami Gardens" }],
+    },
+    {
+      county: "Broward County",
+      cities: [
+        { name: "Fort Lauderdale" },
+        { name: "Pembroke Pines" },
+        { name: "Hollywood" },
+        { name: "Miramar" },
+        { name: "Coral Springs" },
+        { name: "Pompano Beach" },
+        { name: "Davie" },
+        { name: "Plantation" },
+        { name: "Sunrise" },
+        { name: "Deerfield Beach" },
+      ],
+    },
+    {
+      county: "Palm Beach County",
+      cities: [{ name: "West Palm Beach" }, { name: "Boca Raton" }],
+    },
+  ] as ServiceCounty[],
 
   gbpUrl: "{{GBP_URL}}",
   socialUrls: [] as string[], // {{SOCIAL_URLS}}: Yelp, BBB, Facebook, Nextdoor...
@@ -83,6 +116,15 @@ export const siteUrl = (
 export const isStaging = process.env.SITE_STAGING === "1" || isPlaceholder(business.domain);
 
 export const telHref = `tel:${business.phoneE164}`;
+export const mailHref = `mailto:${business.email}`;
+
+/** Every city we serve, flat, in county order. */
+export const serviceCities = business.serviceAreas.flatMap((c) => c.cities.map((city) => ({ ...city, county: c.county })));
+/** "Miami-Dade, Broward and Palm Beach counties" */
+export const countyList = (() => {
+  const names = business.serviceAreas.map((c) => c.county.replace(/ County$/, ""));
+  return names.length > 1 ? `${names.slice(0, -1).join(", ")} and ${names.at(-1)} counties` : `${names[0]} County`;
+})();
 
 /** The brand name for display; falls back to a neutral descriptor while it's a placeholder. */
 export const displayBrand = business.brandName;

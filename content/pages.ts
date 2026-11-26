@@ -1,3 +1,5 @@
+import { business, countyList } from "./business";
+
 /**
  * Page registry. Every URL on the site is listed here, flat under the domain.
  * Body copy lives in content/pages/{slug}.mdx (homepage: home.mdx).
@@ -164,11 +166,10 @@ export const pages: PageEntry[] = [
   {
     slug: "about",
     kind: "utility",
-    metaTitle: "About Us | Sliding Door Repair in Florida",
-    description:
-      "Who repairs your door, the Florida license and insurance behind the work, where we work, and the jobs we turn down.",
-    h1: "About us",
-    subline: "The people, license and limits behind the work.",
+    metaTitle: `About ${business.brandName} | ${business.region}`,
+    description: `${business.brandName} was founded by ${business.founderName}: ${business.yearsInBusiness} years of sliding door repair and installation in ${countyList}.`,
+    h1: `About ${business.brandName}`,
+    subline: `Founded by ${business.founderName}. ${business.yearsInBusiness} years of sliding door work in ${business.region}.`,
     breadcrumb: "About",
     primaryKeyword: "about",
     updated: "2026-11-26",
@@ -176,9 +177,8 @@ export const pages: PageEntry[] = [
   {
     slug: "contact",
     kind: "utility",
-    metaTitle: "Contact Us | Sliding Door Repair Quote in Florida",
-    description:
-      "Call or send a photo of your sliding door for a quote. Service areas, hours and what to include so we can tell you what's wrong faster.",
+    metaTitle: `Contact ${business.brandName} | ${business.phone}`,
+    description: `Call ${business.phone} or send a photo of your sliding door for a quote. We come to homes in ${countyList}.`,
     h1: "Contact us",
     subline: "A photo of the door and a sentence about what it's doing gets you the most useful answer.",
     breadcrumb: "Contact",

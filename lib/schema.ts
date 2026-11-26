@@ -17,6 +17,19 @@ const clean = (o: Json): Json =>
     Object.entries(o).filter(([, v]) => v !== undefined && v !== null && !(Array.isArray(v) && v.length === 0)),
   );
 
+/** Counties and the 15 cities, each city placed inside its county. Used by LocalBusiness and every Service. */
+export function areaServed(): Json[] {
+  return business.serviceAreas.flatMap((c) => {
+    const county = { "@type": "AdministrativeArea", name: `${c.county}, FL` };
+    return [
+      county,
+      ...c.cities.map((city) => ({ "@type": "City", name: `${city.name}, FL`, containedInPlace: county })),
+    ];
+  });
+}
+
+const founder = () => (real(business.founderName) ? { "@type": "Person", name: business.founderName } : undefined);
+
 const sameAs = () => [real(business.gbpUrl), ...business.socialUrls].filter(Boolean) as string[];
 
 export function organizationSchema(): Json {
@@ -28,6 +41,7 @@ export function organizationSchema(): Json {
     logo: `${siteUrl}/logo.png`,
     telephone: business.phoneE164,
     email: real(business.email),
+    founder: founder(),
     sameAs: sameAs(),
   });
 }
@@ -43,41 +57,34 @@ export function websiteSchema(): Json {
   };
 }
 
+/**
+ * Service-area business: no PostalAddress (none was provided, and Google says not to show
+ * a home address for a service-area business). Coverage is expressed through areaServed.
+ */
 export function localBusinessSchema(): Json {
-  const showAddress = business.serviceAreaType === "storefront";
   const hours = business.hours.map((h) => ({
     "@type": "OpeningHoursSpecification",
     dayOfWeek: h.days,
     opens: h.opens,
     closes: h.closes,
   }));
-  const areas = business.serviceAreas.filter((a) => !isPlaceholder(a));
   return clean({
     "@type": "HomeAndConstructionBusiness",
     "@id": ids.business,
     name: business.brandName,
+    description: real(business.about),
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
     image: `${siteUrl}/opengraph-image`,
     telephone: business.phoneE164,
     email: real(business.email),
-    address: clean({
-      "@type": "PostalAddress",
-      streetAddress: showAddress ? business.address.street : undefined,
-      addressLocality: business.address.city,
-      addressRegion: business.address.region,
-      postalCode: showAddress ? business.address.postalCode : undefined,
-      addressCountry: business.address.country,
-    }),
+    founder: founder(),
     geo:
       business.geo.lat != null && business.geo.lng != null
         ? { "@type": "GeoCoordinates", latitude: business.geo.lat, longitude: business.geo.lng }
         : undefined,
     openingHoursSpecification: hours,
-    areaServed: [
-      { "@type": "State", name: "Florida" },
-      ...areas.map((name) => ({ "@type": "AdministrativeArea", name })),
-    ],
+    areaServed: areaServed(),
     parentOrganization: { "@id": ids.org },
     sameAs: sameAs(),
   });
@@ -93,7 +100,7 @@ export function serviceSchema(page: PageEntry): Json {
     description: page.description,
     url: `${siteUrl}${pathFor(page.slug)}`,
     provider: { "@id": ids.business },
-    areaServed: { "@type": "State", name: "Florida" },
+    areaServed: areaServed(),
   };
 }
 
@@ -106,7 +113,7 @@ export function homeServiceSchema(page: PageEntry): Json {
     description: page.description,
     url: `${siteUrl}/`,
     provider: { "@id": ids.business },
-    areaServed: { "@type": "State", name: "Florida" },
+    areaServed: areaServed(),
   };
 }
 

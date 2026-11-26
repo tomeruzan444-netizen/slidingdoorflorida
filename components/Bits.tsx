@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { business, isPlaceholder, telHref } from "@/content/business";
+import { business, countyList, isPlaceholder, telHref } from "@/content/business";
 import type { Faq as FaqItem } from "@/lib/schema";
 
 export function Breadcrumbs({ name }: { name: string }) {
@@ -50,7 +50,7 @@ export function TrustStrip() {
   const items = [
     { k: "License", v: `${business.licenseType} #${business.licenseNumber}` },
     { k: "Insurance", v: business.insurance },
-    { k: "Service area", v: "Florida only" },
+    { k: "Service area", v: countyList },
     { k: "In business", v: `${business.yearsInBusiness} years` },
   ];
   return (

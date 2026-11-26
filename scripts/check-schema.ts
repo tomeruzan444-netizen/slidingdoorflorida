@@ -9,7 +9,8 @@ const REQUIRED: Record<string, string[]> = {
   Organization: ["@id", "name", "url"],
   WebSite: ["@id", "url", "name"],
   WebPage: ["@id", "url", "name"],
-  HomeAndConstructionBusiness: ["@id", "name", "telephone", "address", "url", "areaServed"],
+  // No "address": this is a service-area business (business.serviceAreaType).
+  HomeAndConstructionBusiness: ["@id", "name", "telephone", "url", "areaServed"],
   Service: ["serviceType", "provider", "areaServed"],
   BreadcrumbList: ["itemListElement"],
   FAQPage: ["mainEntity"],

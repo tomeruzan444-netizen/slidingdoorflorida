@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { business, telHref } from "@/content/business";
+import { business, countyList, telHref } from "@/content/business";
 import { pageBySlug } from "@/content/pages";
 import { services } from "@/content/services";
 import { faqsFor } from "@/lib/faqs";
 import { metadataFor } from "@/lib/meta";
 import { graphFor } from "@/lib/schema";
 import { CtaBand, Faq, JsonLd } from "@/components/Bits";
-import { ArrowIcon, BadgeIcon, CameraIcon, PhoneIcon, PinIcon, ShieldIcon } from "@/components/Icons";
+import { ArrowIcon, BadgeIcon, ClockIcon, PhoneIcon, PinIcon, ShieldIcon } from "@/components/Icons";
 import { QuoteForm } from "@/components/QuoteForm";
 import { ServiceArt } from "@/components/ServiceArt";
 import Body from "@/content/pages/home.mdx";
@@ -51,8 +51,12 @@ export default function Home() {
       ),
     },
     { Icon: ShieldIcon, t: "Insured", d: <>{business.insurance}</> },
-    { Icon: PinIcon, t: "Florida only", d: <>Salt air, sand and hurricane season are what doors here deal with, and what this site is written about.</> },
-    { Icon: CameraIcon, t: "Quotes from a photo", d: <>Attach a picture to the form so the first call starts with the right part in mind.</> },
+    { Icon: PinIcon, t: business.region, d: <>{countyList}. Salt air, sand and hurricane season are what doors here deal with.</> },
+    {
+      Icon: ClockIcon,
+      t: `${business.yearsInBusiness} years on sliding doors`,
+      d: <>Founded by {business.founderName}, with {business.yearsInBusiness} years of sliding door work across {business.region}.</>,
+    },
   ];
 
   return (
@@ -81,7 +85,7 @@ export default function Home() {
 
         <div className="mx-auto flex max-w-4xl flex-col items-center px-4 pb-36 pt-14 text-center sm:px-6 sm:pb-44 sm:pt-24 lg:pt-28">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-sea">
-            <PinIcon className="h-4 w-4" /> Sliding door repair for Florida homes
+            <PinIcon className="h-4 w-4" /> Serving {countyList}
           </p>
           <h1 className="mt-5 text-[clamp(2.4rem,1.5rem+3.6vw,4.4rem)] font-extrabold leading-[1.02] tracking-tight text-white">{page.h1}</h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">{page.subline}</p>
