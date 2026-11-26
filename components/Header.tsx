@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MenuCloser } from "./MenuCloser";
 import { business, known, telHref } from "@/content/business";
 import { services } from "@/content/services";
 import { Logo } from "./Logo";
@@ -46,7 +47,7 @@ export function TopBar() {
   );
 }
 
-/** Zero-JS header: menus are native <details>, so they work without hydration. */
+/** Header menus are native <details>, so they open without JS; MenuCloser closes them after navigation. */
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-alu/60 bg-white/95 shadow-[0_1px_12px_rgb(28_38_38/0.06)] backdrop-blur supports-[backdrop-filter]:bg-white/85">
@@ -108,6 +109,7 @@ export function Header() {
           </nav>
         </details>
       </div>
+      <MenuCloser />
     </header>
   );
 }
