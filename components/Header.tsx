@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { business, countyList, known, telHref } from "@/content/business";
+import { business, known, telHref } from "@/content/business";
 import { services } from "@/content/services";
 import { Logo } from "./Logo";
 import { BadgeIcon, ChevronIcon, ClockIcon, MenuIcon, PhoneIcon, PinIcon } from "./Icons";
@@ -20,7 +20,7 @@ export function TopBar() {
           ) : (
             <>
               <PinIcon className="h-4 w-4 text-sea" />
-              <span>Serving {countyList}</span>
+              <span>Crews across Florida &middot; based in {business.homeBase}</span>
             </>
           )}
         </p>
@@ -35,7 +35,7 @@ export function TopBar() {
             </span>
           )}
           <span className="hidden items-center gap-2 md:flex">
-            {business.yearsInBusiness} years on sliding doors
+            {business.teamSize} technicians &middot; {business.yearsInBusiness} years
           </span>
           <a href={telHref} className="hidden items-center gap-2 font-semibold text-white no-underline hover:underline md:flex">
             <PhoneIcon className="h-4 w-4 text-sea" /> {business.phone}

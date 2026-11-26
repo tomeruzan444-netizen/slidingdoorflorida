@@ -17,15 +17,16 @@ const clean = (o: Json): Json =>
     Object.entries(o).filter(([, v]) => v !== undefined && v !== null && !(Array.isArray(v) && v.length === 0)),
   );
 
-/** Counties and the 15 cities, each city placed inside its county. Used by LocalBusiness and every Service. */
+/** Florida (crews statewide), plus the named counties and cities, each city inside its county. */
 export function areaServed(): Json[] {
-  return business.serviceAreas.flatMap((c) => {
+  const named = business.serviceAreas.flatMap((c) => {
     const county = { "@type": "AdministrativeArea", name: `${c.county}, FL` };
     return [
       county,
       ...c.cities.map((city) => ({ "@type": "City", name: `${city.name}, FL`, containedInPlace: county })),
     ];
   });
+  return [{ "@type": "State", name: "Florida" }, ...named];
 }
 
 const founder = () => (real(business.founderName) ? { "@type": "Person", name: business.founderName } : undefined);
@@ -79,6 +80,7 @@ export function localBusinessSchema(): Json {
     telephone: business.phoneE164,
     email: real(business.email),
     founder: founder(),
+    numberOfEmployees: business.teamSize ? { "@type": "QuantitativeValue", minValue: business.teamSize } : undefined,
     geo:
       business.geo.lat != null && business.geo.lng != null
         ? { "@type": "GeoCoordinates", latitude: business.geo.lat, longitude: business.geo.lng }

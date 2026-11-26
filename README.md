@@ -71,7 +71,7 @@ Still missing: `{{DOMAIN}}` (keeps the site in noindex staging mode), `{{LICENSE
 
 - `{/* OWNER-CONFIRM */}` comments in each MDX file mark statements about how the business works. Check them against reality before launch.
 - Quote form email: set `RESEND_API_KEY`, `QUOTE_TO_EMAIL`, `QUOTE_FROM_EMAIL` in Vercel. Until then the form tells visitors to call instead of pretending to send.
-- Pages carry a "With field notes from Joseph Davis" byline, not "Reviewed by". Switch to a review byline only after Joseph has actually read and approved each page.
+- Pages are written as the team ("we": 10 technicians in crews across Florida, led by Joseph Davis) and carry a "Written by the Davis Sliding Door Repair team" byline. Add "Reviewed by Joseph Davis" only after Joseph has actually read and approved each page.
 
 ## Lighthouse (mobile, local production build, 2026-11-26)
 

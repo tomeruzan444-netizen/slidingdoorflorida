@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { business, countyList, known, telHref } from "@/content/business";
+import { business, known, telHref } from "@/content/business";
 import { pageBySlug } from "@/content/pages";
 import { services } from "@/content/services";
 import { faqsFor } from "@/lib/faqs";
@@ -43,7 +43,7 @@ export default function Home() {
     {
       Icon: ClockIcon,
       t: `${business.yearsInBusiness} years on sliding doors`,
-      d: <>Founded by {business.founderName}, with {business.yearsInBusiness} years of sliding door work across {business.region}.</>,
+      d: <>Our founder, {business.founderName}, has spent {business.yearsInBusiness} years on sliding doors. Every crew works to that standard.</>,
       show: true,
     },
     {
@@ -63,16 +63,21 @@ export default function Home() {
     {
       Icon: CheckIcon,
       t: "An honest repair-or-replace call",
-      d: <>If a new door is the better value, you&apos;ll hear that. If new rollers will do it, you&apos;ll hear that too.</>,
+      d: <>If a new door is the better value, we&apos;ll tell you. If new rollers will do it, we&apos;ll tell you that too.</>,
       show: true,
     },
     {
       Icon: RulerIcon,
       t: "Parts matched by measurement",
-      d: <>Rollers and locks are matched to your door&apos;s exact specs, not picked by how they look.</>,
+      d: <>We match rollers and locks to your door&apos;s exact specs, not to how they look.</>,
       show: true,
     },
-    { Icon: PinIcon, t: business.region, d: <>{countyList}. Salt air, sand and humidity are what doors here deal with.</>, show: true },
+    {
+      Icon: PinIcon,
+      t: "Crews across Florida",
+      d: <>{business.teamSize} technicians, based in {business.homeBase}. Salt air, sand and humidity are what we work against every day.</>,
+      show: true,
+    },
   ]
     .filter((f) => f.show)
     .slice(0, 4);
@@ -103,7 +108,7 @@ export default function Home() {
 
         <div className="mx-auto flex max-w-4xl flex-col items-center px-4 pb-36 pt-14 text-center sm:px-6 sm:pb-44 sm:pt-24 lg:pt-28">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-sea">
-            <PinIcon className="h-4 w-4" /> Serving {countyList}
+            <PinIcon className="h-4 w-4" /> {business.teamSize} technicians &middot; crews across Florida
           </p>
           <h1 className="mt-5 text-[clamp(2.4rem,1.5rem+3.6vw,4.4rem)] font-extrabold leading-[1.02] tracking-tight text-white">{page.h1}</h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">{page.subline}</p>
@@ -225,16 +230,17 @@ export default function Home() {
       <section aria-labelledby="founder-heading" className="mx-auto max-w-6xl px-4 pt-16 sm:px-6 sm:pt-20">
         <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
           <div>
-            <p className="config-label">THE FOUNDER</p>
+            <p className="config-label">WHO WE ARE</p>
             <h2 id="founder-heading" className="mt-2 text-[clamp(1.9rem,1.4rem+1.8vw,2.6rem)] font-extrabold">
-              {business.yearsInBusiness} years of sliding doors, one specialty
+              {business.teamSize} technicians, one specialty
             </h2>
             <p className="mt-4 text-lg text-frame-soft">
-              {business.founderName} started out learning how sliding doors are built and why they fail, then spent years on roller swaps, track repairs, lock
-              adjustments and full restorations before founding {business.brandName}. The company does one thing: sliding doors, in {countyList}.
+              We&apos;re a team of {business.teamSize} sliding door technicians, working in crews across Florida. Our founder, {business.founderName}, spent years
+              on roller swaps, track repairs, lock adjustments and full restorations before starting {business.brandName}, and that&apos;s still all we do:
+              sliding doors.
             </p>
             <Link href="/about" className="mt-5 inline-flex items-center gap-2 font-bold text-teal no-underline hover:underline">
-              More about {business.founderName.split(" ")[0]} and the company <ArrowIcon className="h-4 w-4" />
+              Meet the team behind the work <ArrowIcon className="h-4 w-4" />
             </Link>
           </div>
           <JosephSays>

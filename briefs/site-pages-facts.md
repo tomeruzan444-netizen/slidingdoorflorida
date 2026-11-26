@@ -103,3 +103,9 @@ Notes for editors:
 5. **When not to repair.** "I'm always honest with customers about whether a repair makes financial sense. If the door frame is severely damaged, the glass is compromised, or the system has extensive corrosion and multiple failing components, replacement may be the better long-term investment. I don't believe in recommending a repair just to get a job. If replacing the door will provide better value, safety, and reliability, that's what I'll tell the homeowner."
 6. **Most common DIY mistake.** "The biggest mistake I see is trying to force a sliding glass door open or attempting to adjust the rollers without understanding how the door is constructed. Sliding doors are heavy, and improper handling can damage the track, rollers, or frame. Another common mistake is purchasing replacement rollers based only on appearance rather than checking the exact measurements and specifications. Even small differences can affect how the door operates."
 7. **Getting into the trade.** Enjoyed hands-on work and solving practical problems; learned how sliding doors are built, how components work, how to diagnose common issues; hands-on experience with roller replacements, track repairs, lock adjustments and complete restorations; "After years of working in the field, I realized how much homeowners needed a reliable specialist who genuinely understood these systems." That led to founding the company.
+
+## F. Team and coverage update (owner, 2026-11-26)
+
+- 10 technicians work under Joseph Davis, in crews across Florida. Site copy speaks as "we", the team.
+- Coverage is statewide. The 15 named cities stay listed as "some of the cities we serve" (South Florida base). "Based in South Florida" is inferred from the 954 number and the city list: OWNER-CONFIRM.
+- Not invented, still needed from the owner: technician names, crew size, response times, durations, prices, warranty, city-specific stories, photos.

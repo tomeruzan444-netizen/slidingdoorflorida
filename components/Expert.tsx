@@ -38,19 +38,19 @@ export function JosephSays({ children }: { children: React.ReactNode }) {
 }
 
 /**
- * Byline under the page hero: whose experience the page draws on.
- * It says "field notes from", not "reviewed by": a review claim needs the owner to actually review the page.
+ * Byline under the page hero: the team the page speaks for.
+ * Says "written by the team", not "reviewed by Joseph": a review claim needs Joseph to actually review the page.
  */
 export function ExpertByline() {
   return (
     <div className="mt-6 flex max-w-2xl items-center gap-3 rounded-lg bg-white/70 px-4 py-3 ring-1 ring-alu/60">
       <Avatar />
       <p className="text-[0.95rem] leading-snug text-frame-soft">
-        With field notes from{" "}
+        Written by the{" "}
         <Link href="/about" className="font-bold text-frame underline decoration-bronze underline-offset-2">
-          {business.founderName}
+          {business.brandName} team
         </Link>
-        , who founded {business.brandName} and has {business.yearsInBusiness} years of hands-on sliding door work in {business.region}.
+        : {business.teamSize} technicians working across Florida, led by founder {business.founderName} ({business.yearsInBusiness} years on sliding doors).
       </p>
     </div>
   );

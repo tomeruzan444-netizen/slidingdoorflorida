@@ -8,6 +8,7 @@ import { cityHref } from "@/lib/areas";
  */
 export function ServiceAreas() {
   return (
+    <>
     <div className="!mt-5 grid items-start gap-4 sm:grid-cols-3">
       {business.serviceAreas.map((c) => (
         <div key={c.county} className="rounded-lg border border-alu bg-white p-4">
@@ -25,5 +26,7 @@ export function ServiceAreas() {
         </div>
       ))}
     </div>
+    <p className="!mt-3 text-[0.95rem] text-frame-soft">Our crews also work elsewhere in Florida. Not on the list? Call and ask.</p>
+    </>
   );
 }

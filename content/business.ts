@@ -47,9 +47,13 @@ export const business = {
   founderName: "Joseph Davis",
   /** Owner-approved one-line description (used in llms.txt and the about page). */
   about:
-    "Davis Sliding Door Repair is a sliding door repair and installation company founded by Joseph Davis, with 15 years of experience in sliding door services across South Florida.",
-  /** Short region name for headlines and labels. */
-  region: "South Florida",
+    "Davis Sliding Door Repair is a sliding door repair and installation company founded by Joseph Davis, with 15 years of experience in sliding door services. A team of 10 technicians works in crews across Florida.",
+  /** Owner, 2026-11-26: 10 technicians under Joseph, working in crews across Florida. */
+  teamSize: 10,
+  /** Coverage label for headlines and labels. */
+  region: "Florida",
+  /** Where the business is based. Inferred from the 954 number and the city list; OWNER-CONFIRM. */
+  homeBase: "South Florida",
 
   /** Byline is shown only once a real person fills this role. */
   reviewer: { name: "{{REVIEWER_NAME}}", role: "{{REVIEWER_ROLE}}" },
@@ -58,7 +62,10 @@ export const business = {
   hoursText: "{{HOURS}}",
   hours: [] as DayHours[],
 
-  /** Service areas by county. Must match the Google Business Profile. */
+  /**
+   * Cities we list by name (South Florida base). Crews also work elsewhere in Florida,
+   * so these are "some of the cities we serve", not the limit. Must match the Google Business Profile.
+   */
   serviceAreas: [
     {
       county: "Miami-Dade County",
@@ -100,7 +107,7 @@ export const business = {
       service: "sliding-door-roller-replacement",
       title: "The door the homeowner was ready to replace",
       story:
-        "The door barely moved, and the homeowner assumed the frame was damaged and the whole door had to go. The frame was fine. The rollers were worn out, and years of dirt and debris had built up in the track. Joseph replaced the rollers, cleaned the track and adjusted the panel, and once everything lined up the door slid smoothly again. The homeowner kept the door they had.",
+        "The door barely moved, and the homeowner assumed the frame was damaged and the whole door had to go. The frame was fine. The rollers were worn out, and years of dirt and debris had built up in the track. We replaced the rollers, cleaned the track and adjusted the panel, and once everything lined up the door slid smoothly again. The homeowner kept the door they had.",
     },
   ] as CaseNote[],
 } as const;

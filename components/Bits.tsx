@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { business, countyList, isPlaceholder, known, telHref } from "@/content/business";
+import { business, isPlaceholder, known, telHref } from "@/content/business";
 import type { Faq as FaqItem } from "@/lib/schema";
 
 export function Breadcrumbs({ name }: { name: string }) {
@@ -50,10 +50,11 @@ export function TrustStrip() {
   // Only facts the owner has supplied. A missing license or insurance line is left out, never shown as a placeholder.
   const items = [
     { k: "Founded by", v: business.founderName },
+    { k: "Team", v: `${business.teamSize} technicians` },
     { k: "Experience", v: known(business.yearsInBusiness) ? `${business.yearsInBusiness} years on sliding doors` : "" },
     { k: "License", v: known(business.licenseNumber) ? `${business.licenseType} #${business.licenseNumber}` : "" },
     { k: "Insurance", v: business.insurance },
-    { k: "Service area", v: countyList },
+    { k: "Service area", v: "Crews across Florida" },
   ].filter((i) => known(i.v));
   return (
     <ul className="mt-6 grid grid-cols-2 gap-x-6 gap-y-3 border-y-[5px] border-double border-alu py-3 text-sm sm:grid-cols-4">

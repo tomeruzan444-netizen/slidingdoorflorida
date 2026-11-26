@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { business, countyList, known, mailHref, telHref } from "@/content/business";
+import { business, known, mailHref, telHref } from "@/content/business";
 import { services } from "@/content/services";
 import { cityHref } from "@/lib/areas";
 import { LogoMark } from "./Logo";
@@ -18,7 +18,7 @@ export function Footer() {
             <p className="text-lg font-bold">{business.brandName}</p>
           </div>
           <p className="mt-4 text-[0.97rem] leading-relaxed text-alu-light">
-            Sliding door repair and installation in {countyList}.
+            Sliding door repair and installation across Florida. {business.teamSize} technicians in crews around the state, led by founder {business.founderName}.
           </p>
           <ul className="mt-5 space-y-2.5">
             <li>
@@ -60,6 +60,7 @@ export function Footer() {
 
         <div>
           <p className="config-label !text-alu">SERVICE AREAS</p>
+          <p className="mt-3 text-[0.95rem] text-alu-light">Crews across Florida. Some of the cities we serve:</p>
           <div className="mt-3 space-y-4">
             {business.serviceAreas.map((c) => (
               <div key={c.county}>
@@ -91,7 +92,7 @@ export function Footer() {
       </div>
       <div className="border-t border-frame-soft">
         <p className="mx-auto max-w-6xl px-4 py-5 text-sm text-alu sm:px-6">
-          &copy; {new Date().getFullYear()} {business.brandName}. Serving {countyList}, Florida.
+          &copy; {new Date().getFullYear()} {business.brandName}. Crews across Florida, based in {business.homeBase}.
         </p>
       </div>
     </footer>

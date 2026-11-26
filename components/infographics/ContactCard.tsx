@@ -25,7 +25,7 @@ export function ContactCard() {
       <div className="panel p-5 sm:col-span-2">
         <span className="block text-sm text-frame-soft">Where we work</span>
         <span>
-          We come to you in {countyList}. There&apos;s no walk-in location.
+          Our crews come to you across Florida, from our base in {business.homeBase}. There&apos;s no walk-in location.
         </span>
       </div>
     </div>

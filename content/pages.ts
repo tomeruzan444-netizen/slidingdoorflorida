@@ -1,4 +1,4 @@
-import { business, countyList } from "./business";
+import { business } from "./business";
 
 /**
  * Page registry. Every URL on the site is listed here, flat under the domain.
@@ -167,9 +167,9 @@ export const pages: PageEntry[] = [
     slug: "about",
     kind: "utility",
     metaTitle: `About ${business.brandName} | ${business.region}`,
-    description: `${business.brandName} was founded by ${business.founderName}: ${business.yearsInBusiness} years of sliding door repair and installation in ${countyList}.`,
+    description: `${business.brandName}: ${business.teamSize} sliding door technicians in crews across Florida, led by founder ${business.founderName}, ${business.yearsInBusiness} years on sliding doors.`,
     h1: `About ${business.brandName}`,
-    subline: `Founded by ${business.founderName}. ${business.yearsInBusiness} years of sliding door work in ${business.region}.`,
+    subline: `${business.teamSize} technicians, crews across Florida, and ${business.yearsInBusiness} years of sliding door work behind every job.`,
     breadcrumb: "About",
     primaryKeyword: "about",
     updated: "2026-11-26",
@@ -178,7 +178,7 @@ export const pages: PageEntry[] = [
     slug: "contact",
     kind: "utility",
     metaTitle: `Contact ${business.brandName} | ${business.phone}`,
-    description: `Call ${business.phone} or send a photo of your sliding door for a quote. We come to homes in ${countyList}.`,
+    description: `Call ${business.phone} or send a photo of your sliding door for a quote. Our crews come to homes across Florida.`,
     h1: "Contact us",
     subline: "A photo of the door and a sentence about what it's doing gets you the most useful answer.",
     breadcrumb: "Contact",
