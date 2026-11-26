@@ -70,7 +70,7 @@ const SYMPTOMS = [
 export function SymptomFinder() {
   return (
     <figure id="symptoms" className="!max-w-none scroll-mt-24" aria-labelledby="symptom-caption">
-      <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid items-start gap-3 md:grid-cols-2 lg:grid-cols-3">
         {SYMPTOMS.map((s, i) => (
           <details key={s.code} name="symptom" className="symptom rounded border border-alu bg-white" open={i === 0}>
             <summary className="symptom-tab flex items-center justify-between gap-3 rounded-t px-4 py-3.5 transition-colors">
@@ -85,8 +85,8 @@ export function SymptomFinder() {
               <div><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-bronze-dark">Likely cause</dt><dd>{s.cause}</dd></div>
               <div><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-bronze-dark">Check it yourself</dt><dd>{s.check}</dd></div>
               <div><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-bronze-dark">The fix</dt><dd>{s.fix}</dd></div>
-              <dd><Link href={s.href} className="font-semibold">{s.link} &rarr;</Link></dd>
             </dl>
+            <p className="px-4 pb-4 text-[0.97rem]"><Link href={s.href} className="font-semibold">{s.link} &rarr;</Link></p>
           </details>
         ))}
       </div>

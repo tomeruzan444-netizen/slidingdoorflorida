@@ -55,6 +55,9 @@ export const pages: PageEntry[] = [
     primaryKeyword: "sliding glass door replacement",
     updated: "2026-11-26",
     ogLabel: "OXO",
+    answer: "Sliding glass door replacement means removing the old frame and panels and installing a new door with Florida product approval for your location. It makes sense when the frame is corroded or bent, or when you want impact glass. In Florida it needs a building permit, and in Broward and Miami-Dade the door must be approved for the High-Velocity Hurricane Zone.",
+    faqHeading: "Replacement questions: permits, impact glass and timing",
+    closing: "Thinking about a new door but not sure the old one is done? Send us photos of the frame corners and the sill first. Sometimes the answer is a repair.",
   },
   {
     slug: "patio-door-repair",
@@ -69,6 +72,9 @@ export const pages: PageEntry[] = [
     primaryKeyword: "patio door repair",
     updated: "2026-11-26",
     ogLabel: "XO",
+    answer: "Patio door repair depends on the type of door. Sliders and multi-slide systems wear at the rollers, tracks and sill drainage, so repairs focus on leveling panels and clearing water paths. Hinged French doors sag at the hinges and stop meeting their strike, so the fix is hinge adjustment, shims and lock alignment.",
+    faqHeading: "Patio door questions by door type",
+    closing: "Not sure what kind of patio door you have? Send us a photo from inside with the door half open, and we'll tell you what it is and what usually wears on it.",
   },
   {
     slug: "sliding-door-roller-replacement",
@@ -83,6 +89,9 @@ export const pages: PageEntry[] = [
     primaryKeyword: "sliding door roller replacement",
     updated: "2026-11-26",
     ogLabel: "OX",
+    answer: "Sliding door roller replacement means swapping the small wheel assemblies in the bottom of the glass panel. You need it when the door drags or grinds and raising the rollers with their adjustment screws doesn't help. The panel comes out, the old rollers are matched by size and mounting, and new ones go in and get leveled.",
+    faqHeading: "Roller questions, from adjustment screws to stainless",
+    closing: "Measured your roller and still not sure it's the right one? Send us a photo of it next to a ruler and we'll tell you what we'd use.",
   },
   {
     slug: "sliding-door-lock-and-handle-repair",
@@ -97,6 +106,9 @@ export const pages: PageEntry[] = [
     primaryKeyword: "sliding door lock repair",
     updated: "2026-11-26",
     ogLabel: "XO",
+    answer: "Sliding door lock repair starts with the fit. When a latch stops catching, the panel has usually sagged and the hook misses the keeper, so raising the rollers and moving the keeper often fixes it. Locks and handles get replaced when the hook is bent, the lever slips, or the parts are worn loose.",
+    faqHeading: "Lock, latch and handle questions",
+    closing: "Send a photo of the handle, the edge of the panel and the keeper on the frame. We can usually tell from those whether it's a fit problem or a worn-out lock.",
   },
   {
     slug: "sliding-screen-door-repair",
@@ -111,6 +123,9 @@ export const pages: PageEntry[] = [
     primaryKeyword: "sliding screen door repair",
     updated: "2026-11-26",
     ogLabel: "OX",
+    answer: "Sliding screen door repair covers the three parts that fail: torn or sun-brittle mesh, bent aluminum frames, and the small spring rollers that keep the screen on its track. A straight frame gets rescreened, often with a mesh suited to Florida bugs, pets or sun. Worn rollers get replaced, and badly bent frames get a new screen door.",
+    faqHeading: "Screen door questions",
+    closing: "Tell us whether the screen is torn, bent or falling off the track, and what you'd like it to keep out. A photo of the bottom corner helps.",
   },
   {
     slug: "sliding-door-track-repair",
@@ -125,6 +140,9 @@ export const pages: PageEntry[] = [
     primaryKeyword: "sliding door track repair",
     updated: "2026-11-26",
     ogLabel: "OXO",
+    answer: "Sliding door track repair fixes the aluminum rail and sill your door rolls on. You need it when the door bumps or grinds over one spot, jumps the track, or water pools in the sill. Depending on the damage, the fix is a deep cleaning and clearing the weep holes, straightening, a stainless cap, or a new sill section.",
+    faqHeading: "Track and sill questions",
+    closing: "Send us a close-up photo of the rail with a coin on it for scale. That's usually enough for us to tell cleaning from a cap from a new sill.",
   },
   {
     slug: "sliding-closet-door-repair",
@@ -139,6 +157,9 @@ export const pages: PageEntry[] = [
     primaryKeyword: "sliding closet door repair",
     updated: "2026-11-26",
     ogLabel: "XX",
+    answer: "Sliding closet door repair fixes bypass and mirrored doors that fall off the track, scrape the floor, or leave a gap at the wall. These are interior doors that either hang from the top track or roll on a floor track. Most repairs are a height adjustment, a new roller or hanger, or a replacement floor guide.",
+    faqHeading: "Closet door questions",
+    closing: "Send a photo of the bottom corner of the door and the floor track, and we'll tell you whether it's an adjustment, a part, or something you can do yourself.",
   },
   {
     slug: "about",

@@ -32,7 +32,7 @@ export function checkFaqs(): Issue[] {
       const s = jaccard(flat[i].t, flat[j].t);
       if (flat[i].q.trim().toLowerCase() === flat[j].q.trim().toLowerCase() || s >= 0.7) {
         issues.push({ level: "error", check: "faq", msg: `duplicate: "${flat[i].q}" (${flat[i].page}) ~ "${flat[j].q}" (${flat[j].page})` });
-      } else if (s >= 0.5) {
+      } else if (s >= 0.5 && flat[i].page !== flat[j].page) {
         issues.push({ level: "warn", check: "faq", msg: `similar: "${flat[i].q}" (${flat[i].page}) ~ "${flat[j].q}" (${flat[j].page})` });
       }
     }

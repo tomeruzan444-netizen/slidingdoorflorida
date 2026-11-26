@@ -45,6 +45,336 @@
         "q": "Which parts of Florida do you serve?",
         "a": "We work only in Florida. The counties and cities we cover are listed on this page and in the footer. If your town isn't there, call us and we'll tell you whether we can get to you."
       }
+    ],
+    "sliding-door-roller-replacement": [
+      {
+        "q": "Can I replace sliding glass door rollers myself?",
+        "a": "Often, yes, if you have a helper and the right part. The glass panel usually has to be lifted out of the frame, and manufacturers such as JELD-WEN warn that this is dangerous to do alone. Heavy impact panels are best left to a pro."
+      },
+      {
+        "q": "How do I know if my sliding door rollers are bad?",
+        "a": "Raise the rollers first. If the door still drags or grinds, the wheels are likely cracked, worn flat or seized. Once the panel is out, spin each wheel by hand: rough spots, wobble or rust on the axle mean it's done."
+      },
+      {
+        "q": "Which way do I turn the screw to raise my sliding door?",
+        "a": "It depends on the roller. JELD-WEN documents some rollers that rise when turned clockwise and others that drop. Lift the panel slightly, turn a quarter turn, and check whether the gap at the top got smaller or bigger."
+      },
+      {
+        "q": "Where is the roller adjustment screw on a sliding glass door?",
+        "a": "At the two bottom corners of the moving panel, either on the inside face or on the vertical edge. Many doors hide the holes under small plastic caps that pry out with a flat screwdriver."
+      },
+      {
+        "q": "Are sliding door rollers universal?",
+        "a": "No. Rollers differ in wheel diameter, wheel width, edge shape, housing size, mounting style and where the adjustment screw sits. Measure the old one, or take it with you to a parts counter, before buying a replacement."
+      },
+      {
+        "q": "What is the difference between single and tandem rollers?",
+        "a": "A single roller has one wheel in its housing. A tandem has two wheels in line, which spreads a heavy panel's weight over more contact points. Replace like with like, because the housing sizes differ."
+      },
+      {
+        "q": "Are stainless steel rollers worth it near the beach?",
+        "a": "Usually, yes. Stainless resists salt corrosion far better than plated steel, which starts to rust once its coating wears through. The catch is fit: stainless has to be made in the exact size your panel takes."
+      },
+      {
+        "q": "Can I replace just the wheel instead of the whole roller?",
+        "a": "Sometimes. A few roller assemblies take replacement wheels on their own, but many wheels are riveted into the housing. For those, and for any housing with rust or a stripped adjustment screw, replace the whole assembly."
+      },
+      {
+        "q": "Do I have to take the door off to replace the rollers?",
+        "a": "On most doors, yes: the panel is lifted up and swung out at the bottom. Some aluminum doors allow a roller swap by removing the vertical side pieces of the panel instead, but that depends on how the door was built."
+      },
+      {
+        "q": "Should I oil my sliding door rollers?",
+        "a": "Follow your door maker's care sheet, since makers disagree. JELD-WEN suggests light oil where the shaft passes through the wheel, while some makers use sealed bearings meant to run dry. Never pack the track with grease."
+      },
+      {
+        "q": "How many rollers does a sliding glass door have?",
+        "a": "Two per moving panel, one at each bottom corner. A three or four panel door has rollers on every panel that slides. Fixed panels sit on the frame and don't roll."
+      },
+      {
+        "q": "How much weight can sliding door rollers hold?",
+        "a": "It depends on the roller's rating. FGIA's AAMA 906 standard tests roller assemblies at their rated load, with ratings running from 75 pounds to over 600 pounds. A heavy impact panel needs rollers rated for it."
+      }
+    ],
+    "sliding-door-track-repair": [
+      {
+        "q": "Can a sliding door track be repaired, or does it have to be replaced?",
+        "a": "Most tracks can be repaired. Dirt cleans out, small bends straighten, and a worn or grooved rail can get a stainless cap. Replacement is for a rail that's cracked, broken off, or a sill corroded along its length."
+      },
+      {
+        "q": "Do sliding door track repair caps actually work?",
+        "a": "Yes, on a rail that's worn but still intact. The cap bonds over the old rail and gives the rollers a smooth stainless surface. It won't fix a broken rail, and it needs to match your rail's height and width."
+      },
+      {
+        "q": "How do I know what size track cap I need?",
+        "a": "Measure the height and width of the raised rail your rollers ride on, in sixteenths of an inch. Compare that with the opening on the cap's package drawing. Prime-Line's stainless cap drawing, for example, shows a profile of 1/4 by 3/16 inch."
+      },
+      {
+        "q": "How do I get sand out of a sliding door track?",
+        "a": "Vacuum both channels with a crevice tool, then blow out the corners with compressed air, which Loewen recommends for sand and salt. Wipe with a damp cloth and let it dry before adding any lubricant."
+      },
+      {
+        "q": "What lubricant should I use on a sliding door track?",
+        "a": "The one your door's maker names in its care guide. JELD-WEN calls for spray silicone wiped on with a cloth, while Loewen says to avoid silicone and use a marine lubricant. Apply a thin film, never a heavy coat."
+      },
+      {
+        "q": "Is WD-40 OK for a sliding door track?",
+        "a": "We'd skip it. We didn't find a door maker that recommends regular WD-40 for tracks, and oily residue holds sand. Clean the track and use the product named in your door's care sheet instead."
+      },
+      {
+        "q": "What are the little slots in the bottom of my sliding door track for?",
+        "a": "They're weep slots, part of the door's drainage. Rainwater that gets into the sill collects in the channel and drains out through them to weep holes on the outside face of the sill."
+      },
+      {
+        "q": "How do I unclog the weep holes on a sliding glass door?",
+        "a": "Pour a cup of water into the inside channel to find the blocked one. Then work a pipe cleaner or thin wire gently into the outside hole, or use compressed air. Don't push the wire deep, since JELD-WEN warns it can damage the glass unit."
+      },
+      {
+        "q": "Should I caulk my weep holes to stop leaks?",
+        "a": "No. Sealing a weep hole traps water inside the sill, where it overflows onto the floor or damages the wall below. If caulk is already there, cut and scrape it out, and look for the real source of the leak."
+      },
+      {
+        "q": "What is the black residue on my aluminum sliding door track?",
+        "a": "It's oxidation from bare aluminum. JELD-WEN's care guide says it wipes off as a dark residue with a fine scratch pad. It's cosmetic until it turns into pitting on top of the rail, which wears roller wheels."
+      },
+      {
+        "q": "Can I pressure wash my sliding door track?",
+        "a": "It's better not to. A pressure washer can force water into the sill faster than the weep holes drain it, and it can drive grit into places you can't reach. Use a vacuum, a brush and a damp cloth."
+      },
+      {
+        "q": "What is a sill riser on a sliding door?",
+        "a": "It's the raised inner wall of the sill that holds back water blown in by wind. FEMA inspectors after Hurricane Ian found some sliding doors lacked adequate sill risers, which let storm rain spill into homes."
+      }
+    ],
+    "sliding-door-lock-and-handle-repair": [
+      {
+        "q": "Why won't my sliding door lock line up anymore?",
+        "a": "Usually the panel has dropped. Worn or settled rollers lower the door, so the hook swings under the keeper instead of into it. Raise the panel with the roller screws, then slide the keeper up or down in its slotted holes."
+      },
+      {
+        "q": "How do I adjust the latch on a sliding glass door?",
+        "a": "Close the door slowly and watch where the hook meets the keeper. Loosen the keeper's two screws, slide it to meet the hook, and tighten. Some mortise locks also have a screw on the faceplate that changes how far the hook reaches."
+      },
+      {
+        "q": "How do I measure a sliding door handle for replacement?",
+        "a": "Measure the distance between the two mounting screw holes, center to center. Common sizes include 3-15/16, 4-15/16 and 6-5/8 inches. Also measure the panel thickness, since each handle set fits a limited range."
+      },
+      {
+        "q": "Are sliding door handles universal?",
+        "a": "No. Handles vary in screw spacing, panel thickness range, and whether they work a separate mortise lock or have the hook built in. A handle that fits your holes can still fail to work your lock if the lever doesn't match."
+      },
+      {
+        "q": "What is a mortise lock on a sliding door?",
+        "a": "It's the latch mechanism housed in a pocket cut into the edge of the sliding panel, held by two screws through a faceplate. The handle on the face only carries the lever that moves the hook in and out."
+      },
+      {
+        "q": "Can I add a keyed lock to my sliding door?",
+        "a": "Often, yes. Some non-keyed handle sets accept a cylinder conversion kit, and others can be swapped for a keyed set with the same screw spacing. Check that the new set works with the lock body already in your door."
+      },
+      {
+        "q": "Can a locked sliding glass door be lifted off its track?",
+        "a": "Many older ones can. The St. Petersburg Police Department warns that sliders can be lifted up and out, defeating the latch. Anti-lift screws or blocks in the upper track and properly adjusted rollers prevent it."
+      },
+      {
+        "q": "Is a security bar or a dowel in the track better?",
+        "a": "Both block the panel from sliding. A fold-down security bar mounts at mid-height, is easy to see from outside and swings out of the way when you need the door. A dowel works but is easy to forget and can be a trip hazard."
+      },
+      {
+        "q": "Does a sliding door to the pool need an alarm in Florida?",
+        "a": "It's one of the options. For a new residential pool to pass final inspection, Florida Statutes 515.27 requires one of five safety features, and one is an 85 dB A exit alarm on doors with direct pool access. Ask your building department about your situation."
+      },
+      {
+        "q": "Why is my sliding door handle loose?",
+        "a": "The through-screws holding the inside and outside halves together have backed out, or the screw holes in the panel have worn. Tighten them gently. If the handle still wobbles, the mounting bosses may be cracked and the set needs replacing."
+      },
+      {
+        "q": "Should I replace the lock and handle at the same time?",
+        "a": "Not always. If only the handle is cracked and the lock body works, a matching handle is enough. When the lock is worn, replacing both together avoids mismatched levers and keyways, especially on older doors."
+      }
+    ],
+    "sliding-screen-door-repair": [
+      {
+        "q": "Why does my sliding screen door keep falling off the track?",
+        "a": "Usually the small spring rollers at the bottom are worn, cracked or adjusted too high, so the screen loses its grip between the top and bottom tracks. A bent screen frame or a dented outer rail causes the same thing."
+      },
+      {
+        "q": "Is it worth rescreening a sliding screen door or should I buy a new one?",
+        "a": "Rescreen it if the frame is straight and the corners are tight. Replace the screen door if the frame is bent, the corners have split, or the rails are chewed up from coming off the track."
+      },
+      {
+        "q": "Are screen door rollers the same as sliding glass door rollers?",
+        "a": "No. Screen rollers are smaller, lighter spring-tension wheels made for a frame that weighs very little. Glass door rollers carry the full weight of the glass panel. Measure the old screen roller before buying a new one."
+      },
+      {
+        "q": "Can I patch a hole in a screen door instead of replacing the screen?",
+        "a": "For a small, clean hole, yes. A patch kit keeps bugs out even if it shows. If the mesh is brittle and crumbles when pressed, it's sun-damaged all over, and a full rescreen is the only lasting fix."
+      },
+      {
+        "q": "What size spline do I need for my screen door?",
+        "a": "Match a piece of the old spline. Phifer's chart lists .140 inch for standard fiberglass in common grooves and .125 inch for aluminum mesh. Go one size smaller when switching to thicker pet or solar screen."
+      },
+      {
+        "q": "Will no-see-um screen keep out no-see-ums completely?",
+        "a": "Not completely. A 20 by 20 mesh stops far more than standard screen, but a University of Arizona extension sheet suggests 30 by 30 mesh where possible for biting midges. Expect fewer bites, not none."
+      },
+      {
+        "q": "What's the difference between 18x16 and 18x14 screen?",
+        "a": "The numbers are strands per inch in each direction. Phifer's 18 by 16 is its standard fiberglass mesh. Its 18 by 14 is a heavier pool and patio mesh with thicker strands, made for bigger openings."
+      },
+      {
+        "q": "What is the best screen for a house near the beach?",
+        "a": "Fiberglass-based mesh. Phifer recommends fiberglass, sun control screens, TuffScreen and PetScreen for coastal areas. Aluminum mesh isn't on its coastal list, since salt air works on bare metal."
+      },
+      {
+        "q": "Can I put solar screen on a sliding screen door?",
+        "a": "Yes. Phifer's SunTex is sold for door screens and blocks 80 or 90 percent of the sun's heat and glare. It also darkens the view a lot, so it suits doors in hard afternoon sun more than doors you look through all day."
+      },
+      {
+        "q": "How do I tell what mesh my current screen is?",
+        "a": "Count the openings. Cut a one-inch square in a piece of paper, hold it against the screen, and count the openings across and down. Eighteen across and sixteen down means 18 by 16 standard mesh."
+      },
+      {
+        "q": "How do lizards and bugs get in around a sliding screen door?",
+        "a": "Through gaps. Check the bottom of the screen frame, the edge where it meets the glass door, and the pile weatherstrip along the sides. A screen that sits crooked on worn rollers leaves a gap at one corner."
+      }
+    ],
+    "sliding-closet-door-repair": [
+      {
+        "q": "Why does my sliding closet door keep coming off the track?",
+        "a": "On mirror doors that roll on the floor, the door usually sits too low to stay captured in the top channel. On top-hung doors, look for a worn hanger wheel, a loose hanger screw, or a missing floor guide letting the bottom swing."
+      },
+      {
+        "q": "How do I know if my closet door is top-hung or bottom-rolling?",
+        "a": "Slide one door aside and look at the floor. If the door's wheels sit in a floor track, it's bottom-rolling. If there's only a small guide block between the doors, the weight hangs from wheels in the top track."
+      },
+      {
+        "q": "How do you get a mirrored closet door back on the track?",
+        "a": "With two people. Tip the bottom out, lift the top guides into the top channel, swing the bottom in, and lower the rollers into the floor track. Then raise the rollers until the door sits plumb and well up into the top track."
+      },
+      {
+        "q": "Why is there a gap between my closet door and the wall?",
+        "a": "The door is out of plumb. Turn the adjusting screw on the roller or hanger nearest the wall to raise or lower that corner until the edge sits flush with the wall from top to bottom."
+      },
+      {
+        "q": "What does the floor guide do on a bypass closet door?",
+        "a": "On top-hung doors, it keeps the two panels lined up and apart so they don't swing or rub. It doesn't carry any weight. If it's missing or broken, the doors swing at the bottom and can lever themselves off the track."
+      },
+      {
+        "q": "What are anti-jump clips on closet doors?",
+        "a": "Small clips or tabs that stop a door from lifting out of its track. On Slimfold's mirror doors, they snap into the track channel once the bottom roller is adjusted to the right height. Broken clips let the door pop out."
+      },
+      {
+        "q": "Are mirrored closet doors safety glass?",
+        "a": "Most made today have a safety backing film on the mirror. Slimfold, for example, says its reach-in closet mirrors are safety-backed to meet ANSI Z97.1. If yours cracks, leave the backing on, since it holds the broken glass together."
+      },
+      {
+        "q": "Why are the edges of my mirror closet door turning black?",
+        "a": "That's desilvering, where moisture gets behind the mirror's coating. It can't be cleaned or adjusted away. Renin's warranty excludes black edges on doors installed within five miles of salt water, a distance that covers a lot of Florida homes."
+      },
+      {
+        "q": "Can a closet door bottom track go on top of carpet?",
+        "a": "It's not recommended. Contractors Wardrobe advises cutting the carpet back and fastening the track to the floor. Slimfold suggests thin wood strips under the track. A track resting on pad flexes and lets the door drift."
+      },
+      {
+        "q": "Which closet door goes in first, front or back?",
+        "a": "The back door goes in first, in the rear channel of the top and bottom tracks. The front door goes in the front channel after it. Reversing the order usually means taking both out again."
+      },
+      {
+        "q": "My bifold closet door drags on the floor. How do I raise it?",
+        "a": "Adjust it at the pivot. Depending on the brand, the height adjustment is in the bottom pivot bracket or the top pivot. Lift the door slightly, turn the adjuster a little at a time, and check the gap at the floor."
+      }
+    ],
+    "sliding-glass-door-replacement": [
+      {
+        "q": "Do I need a permit to replace a sliding glass door in Florida?",
+        "a": "Yes. The Florida Building Code requires a permit for replacing an exterior door, and door replacement isn't on its list of exempt work. Many counties offer a simpler replacement permit, but they still require product approval and an inspection."
+      },
+      {
+        "q": "What is Florida Product Approval for doors?",
+        "a": "It's the state's approval showing a door model meets the Florida Building Code, identified by an FL number. You can look up any approved door on floridabuilding.org and see whether it's rated for the HVHZ, for impact, and to what design pressure."
+      },
+      {
+        "q": "What is a Miami-Dade NOA?",
+        "a": "A Notice of Acceptance is Miami-Dade County's product approval for building products that pass its testing. Doors installed in the High-Velocity Hurricane Zone, which covers Miami-Dade and Broward, need approval for HVHZ use, and an NOA is one way products show it."
+      },
+      {
+        "q": "Which Florida counties are in the High-Velocity Hurricane Zone?",
+        "a": "Broward and Miami-Dade. The Florida Building Code defines the HVHZ as those two counties, and products used there must be approved for HVHZ conditions. The rest of the state has its own wind requirements, which vary by location."
+      },
+      {
+        "q": "Do I have to install impact glass when I replace a sliding door?",
+        "a": "Not necessarily. Where the code requires opening protection, you can meet it with impact-rated glass or with approved shutters or panels. Your permit office decides what applies at your address, including any exceptions for older homes."
+      },
+      {
+        "q": "Are impact sliding doors worth it compared with shutters?",
+        "a": "It depends on how you live. Impact doors protect the opening all the time with nothing to put up, but they cost more and are much heavier. Shutters cost less and work only when they're installed before the storm."
+      },
+      {
+        "q": "What does XO or OXXO mean on a sliding door quote?",
+        "a": "The letters describe the panels, read from outside the house. X is a panel that slides and O is a fixed panel. XO is a two-panel door with the left panel sliding, and OXXO is four panels with the two center ones sliding."
+      },
+      {
+        "q": "Who can legally replace a sliding glass door in Florida?",
+        "a": "A contractor licensed for it, such as a certified window and door installation specialty contractor, a glass and glazing contractor, or a general, building or residential contractor. Check any license on the DBPR search at myfloridalicense.com before you sign."
+      },
+      {
+        "q": "Can I get an insurance discount for impact sliding doors?",
+        "a": "Possibly. Florida law requires insurers to offer windstorm mitigation discounts that include opening protection, documented on a uniform mitigation verification form. Ask your insurance agent how a new door would affect your policy before you buy."
+      },
+      {
+        "q": "Is there still a federal tax credit for energy-efficient doors?",
+        "a": "Not for doors installed now. The IRS says the energy-efficient home improvement credit doesn't apply to property placed in service after December 31, 2025. Check with a tax professional about your specific situation."
+      },
+      {
+        "q": "Does my condo association have to approve a new sliding door?",
+        "a": "Often, yes. Many associations set rules for frame color, glass tint, impact rating and which contractors may work in the building. Get the association's written approval and requirements before ordering a made-to-size door."
+      },
+      {
+        "q": "What should I look for on the NFRC label of a new sliding door?",
+        "a": "The U-factor and the Solar Heat Gain Coefficient. In Florida, a low SHGC usually matters most because it limits how much afternoon sun heats the room. Low-E glass coatings are what bring that number down."
+      }
+    ],
+    "patio-door-repair": [
+      {
+        "q": "What kind of patio door do I have?",
+        "a": "Watch how it opens. Panels that slide on a bottom track are a slider. Panels that stack behind each other or vanish into the wall are a multi-slide. Panels on side hinges are a French or swinging door."
+      },
+      {
+        "q": "Why is my French patio door rubbing at the top?",
+        "a": "It has sagged on its hinges, so the top corner on the latch side drops into the frame. Adjustable hinges have screws you turn a quarter turn at a time. Standard hinges are corrected with thin shims behind the hinge plate."
+      },
+      {
+        "q": "Why won't my French door latch without pushing hard?",
+        "a": "The latch or the hooks of its multipoint lock are missing the strike plate, usually because the door has sagged. Fix the sag first, then loosen the strike screws and slide the strike to meet the latch, with a shim behind it if needed."
+      },
+      {
+        "q": "How do you adjust the panels on a multi-slide door?",
+        "a": "One panel at a time. Each has its own rollers with a height adjuster, often a hex screw under a cover near the bottom. Take the weight off with a block, adjust, and check that the gap along the frame and the next panel is even."
+      },
+      {
+        "q": "Why do the middle panels of my four-panel slider not meet?",
+        "a": "One center panel has dropped more than the other, so the edges where they lock together don't line up. Both panels need leveling to each other, not just to the frame, and worn rollers on either one need replacing."
+      },
+      {
+        "q": "Why does my multi-slide door leak at the sill?",
+        "a": "Start with the weep holes, since a wide multi-slide sill drains several tracks. If it still leaks with clean weeps, the sill pan or installation underneath may be the problem, which needs someone to inspect it on site."
+      },
+      {
+        "q": "What is the passive panel on a French door?",
+        "a": "It's the panel without the main handle, held closed by bolts that shoot into the head of the frame and the sill. The active panel latches against it. When the doors sag, those bolts often stop reaching their holes."
+      },
+      {
+        "q": "Do French doors need safety glass?",
+        "a": "Glass in doors falls under federal safety glazing rules. Glass in a door other than a slider moves to the stricter Category II once any single piece is over 9 square feet, which large French door lites can reach."
+      },
+      {
+        "q": "How do I keep sand out of a multipoint lock?",
+        "a": "Blow the mechanism out with compressed air, then lubricate it with a waterproof lubricant, which is what Loewen's coastal maintenance guide recommends. A lock that grinds or needs force to turn usually has grit in it."
+      },
+      {
+        "q": "Can a patio door be repaired if the brand is out of business?",
+        "a": "Often, yes. Rollers, handles and weatherstrip can usually be matched by measuring the old parts. The harder cases are custom lock bodies and special extrusions, where a near match may need some fitting or a different approach."
+      }
     ]
   }
 }

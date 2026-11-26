@@ -4,10 +4,11 @@ import { NextResponse, type NextRequest } from "next/server";
 export function proxy(req: NextRequest) {
   const { pathname, search } = req.nextUrl;
   if (pathname.length > 1 && pathname.endsWith("/")) {
-    const url = req.nextUrl.clone();
+    // Build from the raw URL: NextURL can re-apply its own trailing-slash handling.
+    const url = new URL(req.url);
     url.pathname = pathname.replace(/\/+$/, "") || "/";
     url.search = search;
-    return NextResponse.redirect(url, 301);
+    return new NextResponse(null, { status: 301, headers: { Location: url.toString() } });
   }
   return NextResponse.next();
 }

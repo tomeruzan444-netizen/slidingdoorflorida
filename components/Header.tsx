@@ -12,7 +12,7 @@ export function Header() {
         Skip to content
       </a>
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link href="/" className="no-underline" aria-label={`${business.brandName} home`}>
+        <Link href="/" className="no-underline">
           <Logo />
         </Link>
 

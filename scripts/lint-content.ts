@@ -108,7 +108,7 @@ export function lintContent(): Issue[] {
       if (!/\.(tsx?|json)$/.test(f)) continue;
       const text = readFileSync(join(ROOT, d, f), "utf8");
       if (EM_DASH.test(text)) issues.push({ level: "error", check: "lint", msg: `${d}/${f}: em dash found` });
-      if (/\.tsx$/.test(f) && d.includes("infographics")) lintText(`${d}/${f}`, text.replace(/className="[^"]*"/g, ""), issues, { overuse: false });
+      if (/\.tsx$/.test(f) && d.includes("infographics")) lintText(`${d}/${f}`, text.replace(/(className|transform|d|viewBox)="[^"]*"/g, ""), issues, { overuse: false });
     }
   }
   return issues;

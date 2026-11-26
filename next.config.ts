@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   // Trailing-slash URLs get a 301 in proxy.ts (Next's built-in redirect is a 308).
   skipTrailingSlashRedirect: true,
   poweredByHeader: false,
+  // Inline the (small) Tailwind CSS into the HTML so first paint doesn't wait on a stylesheet request.
+  experimental: { inlineCss: true },
   images: { formats: ["image/avif", "image/webp"] },
   async headers() {
     return [
