@@ -55,6 +55,12 @@ URLs are flat: every page sits directly under the domain. Trailing-slash URLs 30
 
 City pages follow BUILD-PROMPT section 10: no city page without 5+ verified local facts and a real local job story.
 
+## Live address and staging mode
+
+Vercel project `slidingdoorflorida` (team tomer7), linked to this repo: every push to `main` deploys to https://slidingdoorflorida.vercel.app.
+
+While `business.domain` is still a placeholder (or `SITE_STAGING=1`), the site runs in staging mode: `noindex, nofollow` meta tag and `X-Robots-Tag` header, robots.txt blocks everything, and the placeholder check only warns. Filling in the real domain turns staging off and makes placeholders fail the production build again.
+
 ## Remaining placeholders (waiting on the owner)
 
 All in `content/business.ts` unless noted:
