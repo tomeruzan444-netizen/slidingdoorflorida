@@ -131,23 +131,43 @@
   }
 }
 
-/* ---------- Hero sliding panels (homepage) ---------- */
+/* ---------- Hero photo in a door frame (homepage) ---------- */
+.hero-frame {
+  border: 1px solid var(--color-alu);
+  border-radius: 3px;
+  background: var(--color-sea);
+  box-shadow: 0 18px 40px -18px rgb(15 92 94 / 0.35);
+}
+.hero-frame::after {
+  /* the aluminum frame and its inner bead, drawn over the photo */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 3px;
+  box-shadow:
+    inset 0 0 0 5px rgb(255 255 255 / 0.55),
+    inset 0 0 0 6px var(--color-alu-light);
+}
+/* Two glass panels cover the photo and slide apart once on load. */
 .hero-glass {
   position: absolute;
   top: 0; bottom: 0;
+  z-index: 1;
   width: 50%;
-  background: linear-gradient(160deg, rgb(255 255 255 / 0.55), rgb(214 235 231 / 0.35));
-  -webkit-backdrop-filter: blur(2.5px);
-  backdrop-filter: blur(2.5px);
+  background: linear-gradient(160deg, rgb(255 255 255 / 0.6), rgb(214 235 231 / 0.45));
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   border: 1px solid rgb(185 194 196 / 0.9);
   box-shadow: inset 0 0 0 6px rgb(255 255 255 / 0.35);
   pointer-events: none;
   will-change: transform;
 }
-.hero-glass--left { left: 0; animation: slide-left 0.9s 0.05s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
-.hero-glass--right { right: 0; animation: slide-right 0.9s 0.05s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
-@keyframes slide-left { to { transform: translateX(-92%); opacity: 0.35; } }
-@keyframes slide-right { to { transform: translateX(92%); opacity: 0.35; } }
+.hero-glass--left { left: 0; animation: slide-left 1s 0.15s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
+.hero-glass--right { right: 0; animation: slide-right 1s 0.15s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
+@keyframes slide-left { to { transform: translateX(-101%); opacity: 0; } }
+@keyframes slide-right { to { transform: translateX(101%); opacity: 0; } }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -155,8 +175,7 @@
     animation-delay: 0s !important;
     transition-duration: 0.001ms !important;
   }
-  .hero-glass--left { transform: translateX(-92%); opacity: 0.35; }
-  .hero-glass--right { transform: translateX(92%); opacity: 0.35; }
+  .hero-glass { display: none; }
 }
 
 /* ---------- Long-form prose ---------- */
