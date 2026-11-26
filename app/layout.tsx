@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Source_Sans_3, Space_Grotesk } from "next/font/google";
-import { business, siteUrl } from "@/content/business";
+import { business, isStaging, siteUrl } from "@/content/business";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileCallBar } from "@/components/MobileCallBar";
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: business.brandName,
   formatDetection: { telephone: false },
+  ...(isStaging ? { robots: { index: false, follow: false } } : {}),
 };
 
 export const viewport: Viewport = {

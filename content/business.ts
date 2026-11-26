@@ -68,8 +68,19 @@ export const isPlaceholder = (v: unknown): boolean =>
 /** Site URL used for canonicals, sitemap and schema. */
 export const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ||
-  (isPlaceholder(business.domain) ? "https://www.example.com" : business.domain)
+  (isPlaceholder(business.domain)
+    ? process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "https://www.example.com"
+    : business.domain)
 ).replace(/\/$/, "");
+
+/**
+ * Staging mode: the site is live on a temporary address but must stay out of search results.
+ * On when SITE_STAGING=1, and automatically while the domain is still a placeholder.
+ * Sends noindex (meta + X-Robots-Tag), blocks robots.txt, and lets the build pass with placeholders.
+ */
+export const isStaging = process.env.SITE_STAGING === "1" || isPlaceholder(business.domain);
 
 export const telHref = `tel:${business.phoneE164}`;
 

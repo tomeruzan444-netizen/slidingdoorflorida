@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { business } from "../content/business";
+import { business, isStaging } from "../content/business";
 import { ROOT, type Issue } from "./lib/content";
 
 const PH = /\{\{([A-Z_]+)\}\}/g;
@@ -9,9 +9,11 @@ const PH = /\{\{([A-Z_]+)\}\}/g;
  * Lists every remaining {{PLACEHOLDER}}.
  * Fails the build on Vercel production (VERCEL_ENV=production) or when STRICT_PLACEHOLDERS=1.
  * Elsewhere it only warns, so previews keep building while owner data is pending.
+ * Staging mode (SITE_STAGING=1 or placeholder domain) also only warns: that site is noindexed.
  */
 export function checkPlaceholders(): Issue[] {
-  const strict = process.env.VERCEL_ENV === "production" || process.env.STRICT_PLACEHOLDERS === "1";
+  const strict =
+    process.env.STRICT_PLACEHOLDERS === "1" || (process.env.VERCEL_ENV === "production" && !isStaging);
   const found = new Map<string, Set<string>>();
   const add = (name: string, where: string) => {
     if (!found.has(name)) found.set(name, new Set());
