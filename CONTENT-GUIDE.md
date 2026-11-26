@@ -202,7 +202,7 @@ Every page gets `/briefs/{slug}.md` with:
 - Every regulatory fact is checked against the official source at the time of writing (codes and rules change). Record the check date in the brief.
 - When in doubt, say so honestly: "Permit rules vary by city. We check with your local building department before any replacement."
 - **No legal or insurance advice.** Explain principles and refer to the right party.
-- External links: only to primary, reliable sources, when they help the visitor (e.g. license verification on DBPR). No links to competitors.
+- **No outbound links, no named sources (owner rule, 2026-11-26).** Pages never link to external sites or files (PDFs, forms, guides), never name a source, publisher, data set, manufacturer, product brand or competitor, and never cite statute or code section numbers. Sources are checked and recorded in the brief only. State the fact in the business's own voice. The linter fails the build on any of these.
 
 ### 22. Never invent
 Customer names, reviews, quotes, business statistics ("97% of our customers..."), years in business, number of jobs, licenses, warranties, arrival times, prices, stock "before/after" photos presented as the business's work. **All of these come only from the owner.** Until then, a placeholder stays.
@@ -220,7 +220,7 @@ Customer names, reviews, quotes, business statistics ("97% of our customers...")
 - [ ] Answer block at the top, and answer-first under every question H2.
 - [ ] A unique infographic, accessible and readable on mobile.
 - [ ] Primary keyword in the title, H1, first 100 words, one H2, URL, and meta.
-- [ ] 2+ outbound contextual links, and 2+ inbound from relevant pages.
+- [ ] Zero outbound links and zero named sources, brands or competitors. 2+ internal contextual links out, and 2+ inbound from relevant pages.
 - [ ] Sidebar shows only related services.
 - [ ] Every fact checked against a source.
 - [ ] Nothing invented about the business.

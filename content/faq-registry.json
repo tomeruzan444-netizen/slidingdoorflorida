@@ -23,7 +23,7 @@
       },
       {
         "q": "Does salt air damage sliding glass doors?",
-        "a": "Yes. Salt holds moisture against metal rollers, screws and aluminum tracks, which speeds up corrosion. One manufacturer, Loewen, tells owners in coastal areas to clean and inspect doors every three months instead of every six."
+        "a": "Yes. Salt holds moisture against metal rollers, screws and aluminum tracks, which speeds up corrosion. Near the coast, plan to clean and inspect doors every three months instead of every six."
       },
       {
         "q": "What should I check on my sliding doors before hurricane season?",
@@ -49,7 +49,7 @@
     "sliding-door-roller-replacement": [
       {
         "q": "Can I replace sliding glass door rollers myself?",
-        "a": "Often, yes, if you have a helper and the right part. The glass panel usually has to be lifted out of the frame, and manufacturers such as JELD-WEN warn that this is dangerous to do alone. Heavy impact panels are best left to a pro."
+        "a": "Often, yes, if you have a helper and the right part. The glass panel usually has to be lifted out of the frame, and that's dangerous to do alone. Heavy impact panels are best left to a pro."
       },
       {
         "q": "How do I know if my sliding door rollers are bad?",
@@ -57,7 +57,7 @@
       },
       {
         "q": "Which way do I turn the screw to raise my sliding door?",
-        "a": "It depends on the roller. JELD-WEN documents some rollers that rise when turned clockwise and others that drop. Lift the panel slightly, turn a quarter turn, and check whether the gap at the top got smaller or bigger."
+        "a": "It depends on the roller. Some rollers rise when turned clockwise and others drop. Lift the panel slightly, turn a quarter turn, and check whether the gap at the top got smaller or bigger."
       },
       {
         "q": "Where is the roller adjustment screw on a sliding glass door?",
@@ -85,7 +85,7 @@
       },
       {
         "q": "Should I oil my sliding door rollers?",
-        "a": "Follow your door maker's care sheet, since makers disagree. JELD-WEN suggests light oil where the shaft passes through the wheel, while some makers use sealed bearings meant to run dry. Never pack the track with grease."
+        "a": "Follow your door maker's care sheet, since makers disagree. Some call for light oil where the shaft passes through the wheel, while others use sealed bearings meant to run dry. Never pack the track with grease."
       },
       {
         "q": "How many rollers does a sliding glass door have?",
@@ -93,7 +93,7 @@
       },
       {
         "q": "How much weight can sliding door rollers hold?",
-        "a": "It depends on the roller's rating. FGIA's AAMA 906 standard tests roller assemblies at their rated load, with ratings running from 75 pounds to over 600 pounds. A heavy impact panel needs rollers rated for it."
+        "a": "It depends on the roller's rating. The industry roller standard tests roller assemblies at their rated load, with ratings running from 75 pounds to over 600 pounds. A heavy impact panel needs rollers rated for it."
       }
     ],
     "sliding-door-track-repair": [
@@ -111,11 +111,11 @@
       },
       {
         "q": "How do I get sand out of a sliding door track?",
-        "a": "Vacuum both channels with a crevice tool, then blow out the corners with compressed air, which Loewen recommends for sand and salt. Wipe with a damp cloth and let it dry before adding any lubricant."
+        "a": "Vacuum both channels with a crevice tool, then blow out the corners with compressed air, which works best on sand and salt. Wipe with a damp cloth and let it dry before adding any lubricant."
       },
       {
         "q": "What lubricant should I use on a sliding door track?",
-        "a": "The one your door's maker names in its care guide. JELD-WEN calls for spray silicone wiped on with a cloth, while Loewen says to avoid silicone and use a marine lubricant. Apply a thin film, never a heavy coat."
+        "a": "The one your door's maker names in its care guide. Some makers call for spray silicone wiped on with a cloth, while others say to avoid silicone and use a marine lubricant. Apply a thin film, never a heavy coat."
       },
       {
         "q": "Is WD-40 OK for a sliding door track?",
@@ -127,7 +127,7 @@
       },
       {
         "q": "How do I unclog the weep holes on a sliding glass door?",
-        "a": "Pour a cup of water into the inside channel to find the blocked one. Then work a pipe cleaner or thin wire gently into the outside hole, or use compressed air. Don't push the wire deep, since JELD-WEN warns it can damage the glass unit."
+        "a": "Pour a cup of water into the inside channel to find the blocked one. Then work a pipe cleaner or thin wire gently into the outside hole, or use compressed air. Don't push the wire deep, since it can damage the glass unit."
       },
       {
         "q": "Should I caulk my weep holes to stop leaks?",
@@ -135,7 +135,7 @@
       },
       {
         "q": "What is the black residue on my aluminum sliding door track?",
-        "a": "It's oxidation from bare aluminum. JELD-WEN's care guide says it wipes off as a dark residue with a fine scratch pad. It's cosmetic until it turns into pitting on top of the rail, which wears roller wheels."
+        "a": "It's oxidation from bare aluminum. It wipes off as a dark residue with a fine scratch pad. It's cosmetic until it turns into pitting on top of the rail, which wears roller wheels."
       },
       {
         "q": "Can I pressure wash my sliding door track?",
@@ -143,7 +143,7 @@
       },
       {
         "q": "What is a sill riser on a sliding door?",
-        "a": "It's the raised inner wall of the sill that holds back water blown in by wind. FEMA inspectors after Hurricane Ian found some sliding doors lacked adequate sill risers, which let storm rain spill into homes."
+        "a": "It's the raised inner wall of the sill that holds back water blown in by wind. Inspectors after Hurricane Ian found some sliding doors lacked adequate sill risers, which let storm rain spill into homes."
       }
     ],
     "sliding-door-lock-and-handle-repair": [
@@ -173,7 +173,7 @@
       },
       {
         "q": "Can a locked sliding glass door be lifted off its track?",
-        "a": "Many older ones can. The St. Petersburg Police Department warns that sliders can be lifted up and out, defeating the latch. Anti-lift screws or blocks in the upper track and properly adjusted rollers prevent it."
+        "a": "Many older ones can. A slider can be lifted up and out, defeating the latch. Anti-lift screws or blocks in the upper track and properly adjusted rollers prevent it."
       },
       {
         "q": "Is a security bar or a dowel in the track better?",
@@ -181,7 +181,7 @@
       },
       {
         "q": "Does a sliding door to the pool need an alarm in Florida?",
-        "a": "It's one of the options. For a new residential pool to pass final inspection, Florida Statutes 515.27 requires one of five safety features, and one is an 85 dB A exit alarm on doors with direct pool access. Ask your building department about your situation."
+        "a": "It's one of the options. For a new residential pool to pass final inspection, Florida law requires one of five safety features, and one is an 85 dB A exit alarm on doors with direct pool access. Ask your building department about your situation."
       },
       {
         "q": "Why is my sliding door handle loose?",
@@ -211,7 +211,7 @@
       },
       {
         "q": "What size spline do I need for my screen door?",
-        "a": "Match a piece of the old spline. Phifer's chart lists .140 inch for standard fiberglass in common grooves and .125 inch for aluminum mesh. Go one size smaller when switching to thicker pet or solar screen."
+        "a": "Match a piece of the old spline. Typical sizing is .140 inch for standard fiberglass in common grooves and .125 inch for aluminum mesh. Go one size smaller when switching to thicker pet or solar screen."
       },
       {
         "q": "Will no-see-um screen keep out no-see-ums completely?",
@@ -219,15 +219,15 @@
       },
       {
         "q": "What's the difference between 18x16 and 18x14 screen?",
-        "a": "The numbers are strands per inch in each direction. Phifer's 18 by 16 is its standard fiberglass mesh. Its 18 by 14 is a heavier pool and patio mesh with thicker strands, made for bigger openings."
+        "a": "The numbers are strands per inch in each direction. 18 by 16 is the standard fiberglass mesh. 18 by 14 is a heavier pool and patio mesh with thicker strands, made for bigger openings."
       },
       {
         "q": "What is the best screen for a house near the beach?",
-        "a": "Fiberglass-based mesh. Phifer recommends fiberglass, sun control screens, TuffScreen and PetScreen for coastal areas. Aluminum mesh isn't on its coastal list, since salt air works on bare metal."
+        "a": "Fiberglass-based mesh. Fiberglass, sun control screens and tougher pet-resistant meshes all suit coastal areas. Aluminum mesh doesn't, since salt air works on bare metal."
       },
       {
         "q": "Can I put solar screen on a sliding screen door?",
-        "a": "Yes. Phifer's SunTex is sold for door screens and blocks 80 or 90 percent of the sun's heat and glare. It also darkens the view a lot, so it suits doors in hard afternoon sun more than doors you look through all day."
+        "a": "Yes. Solar screen mesh is sold for door screens and blocks 80 or 90 percent of the sun's heat and glare. It also darkens the view a lot, so it suits doors in hard afternoon sun more than doors you look through all day."
       },
       {
         "q": "How do I tell what mesh my current screen is?",
@@ -261,11 +261,11 @@
       },
       {
         "q": "What are anti-jump clips on closet doors?",
-        "a": "Small clips or tabs that stop a door from lifting out of its track. On Slimfold's mirror doors, they snap into the track channel once the bottom roller is adjusted to the right height. Broken clips let the door pop out."
+        "a": "Small clips or tabs that stop a door from lifting out of its track. On many mirror doors, they snap into the track channel once the bottom roller is adjusted to the right height. Broken clips let the door pop out."
       },
       {
         "q": "Are mirrored closet doors safety glass?",
-        "a": "Most made today have a safety backing film on the mirror. Slimfold, for example, says its reach-in closet mirrors are safety-backed to meet ANSI Z97.1. If yours cracks, leave the backing on, since it holds the broken glass together."
+        "a": "Most made today have a safety backing film on the mirror. They're backed to meet safety glazing standards. If yours cracks, leave the backing on, since it holds the broken glass together."
       },
       {
         "q": "Why are the edges of my mirror closet door turning black?",
@@ -273,7 +273,7 @@
       },
       {
         "q": "Can a closet door bottom track go on top of carpet?",
-        "a": "It's not recommended. Contractors Wardrobe advises cutting the carpet back and fastening the track to the floor. Slimfold suggests thin wood strips under the track. A track resting on pad flexes and lets the door drift."
+        "a": "It's not recommended. Cut the carpet back and fasten the track to the floor, or set thin wood strips under the track. A track resting on pad flexes and lets the door drift."
       },
       {
         "q": "Which closet door goes in first, front or back?",
@@ -291,7 +291,7 @@
       },
       {
         "q": "What is Florida Product Approval for doors?",
-        "a": "It's the state's approval showing a door model meets the Florida Building Code, identified by an FL number. You can look up any approved door on floridabuilding.org and see whether it's rated for the HVHZ, for impact, and to what design pressure."
+        "a": "It's the state's approval showing a door model meets the Florida Building Code, identified by an FL number. You can look up any approved door in the state's database and see whether it's rated for the HVHZ, for impact, and to what design pressure."
       },
       {
         "q": "What is a Miami-Dade NOA?",
@@ -315,7 +315,7 @@
       },
       {
         "q": "Who can legally replace a sliding glass door in Florida?",
-        "a": "A contractor licensed for it, such as a certified window and door installation specialty contractor, a glass and glazing contractor, or a general, building or residential contractor. Check any license on the DBPR search at myfloridalicense.com before you sign."
+        "a": "A contractor licensed for it, such as a certified window and door installation specialty contractor, a glass and glazing contractor, or a general, building or residential contractor. Check any license with the state licensing board before you sign."
       },
       {
         "q": "Can I get an insurance discount for impact sliding doors?",
@@ -323,14 +323,14 @@
       },
       {
         "q": "Is there still a federal tax credit for energy-efficient doors?",
-        "a": "Not for doors installed now. The IRS says the energy-efficient home improvement credit doesn't apply to property placed in service after December 31, 2025. Check with a tax professional about your specific situation."
+        "a": "Not for doors installed now. The federal energy-efficient home improvement credit doesn't apply to property placed in service after December 31, 2025. Check with a tax professional about your specific situation."
       },
       {
         "q": "Does my condo association have to approve a new sliding door?",
         "a": "Often, yes. Many associations set rules for frame color, glass tint, impact rating and which contractors may work in the building. Get the association's written approval and requirements before ordering a made-to-size door."
       },
       {
-        "q": "What should I look for on the NFRC label of a new sliding door?",
+        "q": "What should I look for on the energy rating label of a new sliding door?",
         "a": "The U-factor and the Solar Heat Gain Coefficient. In Florida, a low SHGC usually matters most because it limits how much afternoon sun heats the room. Low-E glass coatings are what bring that number down."
       }
     ],
@@ -369,7 +369,7 @@
       },
       {
         "q": "How do I keep sand out of a multipoint lock?",
-        "a": "Blow the mechanism out with compressed air, then lubricate it with a waterproof lubricant, which is what Loewen's coastal maintenance guide recommends. A lock that grinds or needs force to turn usually has grit in it."
+        "a": "Blow the mechanism out with compressed air, then lubricate it with a waterproof lubricant, the right choice near the coast. A lock that grinds or needs force to turn usually has grit in it."
       },
       {
         "q": "Can a patio door be repaired if the brand is out of business?",
@@ -391,7 +391,7 @@
       },
       {
         "q": "How often should I clean the track on a slider facing Biscayne Bay?",
-        "a": "Monthly is a sensible schedule. JELD-WEN's care guide suggests hardware maintenance at least twice a year and monthly in coastal areas. Vacuum the sill, brush out the weep holes and check the rollers for rust or orange streaks along the track."
+        "a": "Monthly is a sensible schedule. Plan on hardware maintenance at least twice a year and monthly in coastal areas. Vacuum the sill, brush out the weep holes and check the rollers for rust or orange streaks along the track."
       },
       {
         "q": "Should I tell building management before a sliding door repair?",
@@ -453,7 +453,7 @@
       },
       {
         "q": "Do impact sliding doors need special rollers?",
-        "a": "They need rollers rated for the panel's weight. FGIA's AAMA 906 standard tests roller assemblies at the load their maker rates them for. A light-duty roller under a laminated impact panel wears out early, so match the rating as well as the size."
+        "a": "They need rollers rated for the panel's weight. The industry roller standard tests roller assemblies at the load their maker rates them for. A light-duty roller under a laminated impact panel wears out early, so match the rating as well as the size."
       },
       {
         "q": "Can I pull my own door permit in Miramar instead of the contractor?",
@@ -467,11 +467,11 @@
     "sliding-glass-door-repair-pembroke-pines": [
       {
         "q": "Can I still get parts for a 1990s sliding door in Pembroke Pines?",
-        "a": "Usually, but it can take some digging. Older PGT and CGI models and doors from brands that stopped making parts are the hardest. We identify the model where we can and match rollers and handles by measurement, not by how they look in a photo."
+        "a": "Usually, but it can take some digging. Older impact models and doors from brands that stopped making parts are the hardest. We identify the model where we can and match rollers and handles by measurement, not by how they look in a photo."
       },
       {
         "q": "How old is the typical sliding door in a Pembroke Pines house?",
-        "a": "If it's original, about 30 years. The median Pembroke Pines home was built in 1992, per the Census Bureau's 2019-2023 American Community Survey, and 37.6% of homes date from the 1990s. Many doors have been replaced since, so check for a date or label on the glass."
+        "a": "If it's original, about 30 years. The median Pembroke Pines home was built in 1992, and 37.6% of homes date from the 1990s. Many doors have been replaced since, so check for a date or label on the glass."
       },
       {
         "q": "Do I need HOA approval to change my screen mesh color in Pembroke Pines?",
@@ -489,7 +489,7 @@
     "sliding-glass-door-repair-hollywood": [
       {
         "q": "Why does my Hollywood slider leak only when rain blows sideways?",
-        "a": "Wind pushes water into the sill faster than the weep holes can drain it. A Florida Building Commission report cites FEMA findings that wind-driven rain in Hurricane Ian entered homes mainly through sliding doors and soffits. Clear the weep holes and check the track for pitting or a bent lip."
+        "a": "Wind pushes water into the sill faster than the weep holes can drain it. After Hurricane Ian, inspectors found that wind-driven rain entered homes mainly through sliding doors and soffits. Clear the weep holes and check the track for pitting or a bent lip."
       },
       {
         "q": "Does a house in a Hollywood historic district need approval for a new sliding door?",
@@ -533,11 +533,11 @@
     "sliding-glass-door-repair-davie": [
       {
         "q": "How do I identify the sliding door on my Davie manufactured home?",
-        "a": "Look for its certification label. Federal rules in 24 CFR 3280.403 require sliding glass doors in manufactured homes to be certified to AAMA 1701.2 or the North American Fenestration Standard and to carry a label from a certification body. Photograph it and send it with your request."
+        "a": "Look for its certification label. Federal rules require sliding glass doors in manufactured homes to be certified to a recognized door standard and to carry a label from a certification body. Photograph it and send it with your request."
       },
       {
         "q": "My Davie pool was approved with door alarms. What happens if I replace the slider?",
-        "a": "Plan to put the alarm back on the new door. Exit alarms are one of the pool safety options in Florida Statutes 515.27, rated at least 85 dB A at 10 feet. Ask the town's building division what it expects for your home before the old door comes out."
+        "a": "Plan to put the alarm back on the new door. Exit alarms are one of the pool safety options under Florida law, rated at least 85 dB A at 10 feet. Ask the town's building division what it expects for your home before the old door comes out."
       },
       {
         "q": "Why does my Davie slider grind when we live nowhere near the beach?",
@@ -655,7 +655,7 @@
       },
       {
         "q": "Can my Deerfield Beach condo board reject the impact door I picked?",
-        "a": "Not if it meets the board's adopted specifications. Under section 718.113(5) of the Florida Statutes, a board can't refuse hurricane protection that conforms to its specifications, but it can require the door to match the building's existing outside appearance. Get the specifications before you order."
+        "a": "Not if it meets the board's adopted specifications. Under Florida condo law, a board can't refuse hurricane protection that conforms to its specifications, but it can require the door to match the building's existing outside appearance. Get the specifications before you order."
       },
       {
         "q": "Does the Deerfield Beach Community Appearance Board review door changes?",
@@ -669,7 +669,7 @@
       },
       {
         "q": "Is Boca Raton in a wind-borne debris region?",
-        "a": "Expect it to be. Palm Beach County's Building Division says all of unincorporated Palm Beach County is in the wind-borne debris region, where glazed openings need impact glass or approved protection. The city's building division confirms the requirement for your address when you apply for a permit."
+        "a": "Expect it to be. All of unincorporated Palm Beach County is in the wind-borne debris region, where glazed openings need impact glass or approved protection. The city's building division confirms the requirement for your address when you apply for a permit."
       },
       {
         "q": "What paperwork has to be at the house for a Boca Raton door inspection?",
@@ -703,7 +703,7 @@
       },
       {
         "q": "What does West Palm Beach check on a replacement sliding door?",
-        "a": "Wind loads and product approval. The city's Building Division says replacing a door needs a permit, the product must meet the wind loads in West Palm Beach, and it must be installed according to the manufacturer's product approval documents. Palm Beach County is outside the HVHZ, so no HVHZ approval is needed."
+        "a": "Wind loads and product approval. Replacing a door needs a permit, the product must meet the wind loads in West Palm Beach, and it must be installed according to the manufacturer's product approval documents. Palm Beach County is outside the HVHZ, so no HVHZ approval is needed."
       }
     ]
   }

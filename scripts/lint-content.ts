@@ -85,8 +85,38 @@ function lintHeadings(where: string, mdx: string, issues: Issue[]) {
   }
 }
 
+/**
+ * Owner rule (2026-11-26): no outbound links, no linked files, and no named sources,
+ * manufacturers or competitors anywhere in visitor-facing content.
+ */
+const OWN_HOSTS = /^(https?:\/\/)?(www\.)?(davisslidingdoorflorida\.com|schema\.org|www\.w3\.org\/2000)/i;
+const EXTERNAL_URL = /https?:\/\/[^\s"'`)<>\\]+/gi;
+const BARE_DOMAIN = /\b[a-z0-9-]+\.(com|gov|org|net|edu|io|us)\b/gi;
+const SOURCE_NAMES = /\b(census|american community survey|noaa|national hurricane center|fema|jeld-?wen|loewen|phifer|tuffscreen|petscreen|suntex|pgt|cgi|marvin|multislide|slimfold|contractors wardrobe|andersen|pella|milgard|building america|department of energy|irs|nfrc|fgia|aama|ansi|cpsc|dbpr|myfloridalicense|floridabuilding|up\.codes|building commission|police department|visitor bureau|home depot|lowe'?s|yelp|angi|homeadvisor|thumbtack|houzz|reddit|wikipedia)\b/i;
+const CITATION = /\b(\d+ cfr \d+|florida statutes|section \d+\.\d+|rule \d+[a-z]\d*-|sources?:|according to (the )?(census|city's|county's|a |an ))/i;
+
+function lintSourcesAndLinks(where: string, raw: string, issues: Issue[]) {
+  for (const m of raw.match(EXTERNAL_URL) ?? []) {
+    if (!OWN_HOSTS.test(m) && !m.includes("${")) issues.push({ level: "error", check: "lint", msg: `${where}: external link "${m.slice(0, 80)}" (no outbound links allowed)` });
+  }
+  for (const m of raw.replace(EXTERNAL_URL, " ").match(BARE_DOMAIN) ?? []) {
+    if (!/davisslidingdoorflorida|schema\.org|w3\.org/i.test(m)) issues.push({ level: "error", check: "lint", msg: `${where}: site name "${m}" in text` });
+  }
+  const s = raw.match(SOURCE_NAMES);
+  if (s) issues.push({ level: "error", check: "lint", msg: `${where}: named source/brand/competitor "${s[0]}"` });
+  const c = raw.match(CITATION);
+  if (c) issues.push({ level: "error", check: "lint", msg: `${where}: citation-style reference "${c[0]}"` });
+}
+
 export function lintContent(): Issue[] {
   const issues: Issue[] = [];
+  for (const p of allPages) lintSourcesAndLinks(p.slug || "home", readMdx(p.slug), issues);
+  lintSourcesAndLinks("content/faq-registry.json", readFileSync(join(ROOT, "content/faq-registry.json"), "utf8"), issues);
+  lintSourcesAndLinks("content/pages.ts", readFileSync(join(ROOT, "content/pages.ts"), "utf8"), issues);
+  for (const d of ["components", "components/infographics"]) {
+    for (const f of readdirSync(join(ROOT, d))) if (/\.tsx$/.test(f)) lintSourcesAndLinks(`${d}/${f}`, readFileSync(join(ROOT, d, f), "utf8"), issues);
+  }
+  lintSourcesAndLinks("app/page.tsx", readFileSync(join(ROOT, "app/page.tsx"), "utf8"), issues);
   for (const p of allPages) {
     const where = p.slug || "home";
     // Owner request (2026-11-26): city pages carry the three "near me" search phrases, once each, body only.

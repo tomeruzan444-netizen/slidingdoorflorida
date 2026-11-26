@@ -52,9 +52,7 @@ export default function Home() {
       d: (
         <>
           {business.licenseType} #{business.licenseNumber}.{" "}
-          <a href="https://www2.myfloridalicense.com/how-to-verify-a-license/" className="text-teal underline decoration-bronze underline-offset-2">
-            Check it on DBPR
-          </a>
+          Verifiable with the state licensing board.
         </>
       ),
       show: known(business.licenseNumber),
