@@ -26,6 +26,8 @@ export const metadata: Metadata = {
         "max-video-preview": -1,
         googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large", "max-video-preview": -1 },
       },
+  // Google Search Console ownership verification (renders <meta name="google-site-verification">).
+  verification: { google: "xJEhjlr6eAmxXo4lLw762Papq9dHSXgUwGopd01-4W4" },
 };
 
 export const viewport: Viewport = {
