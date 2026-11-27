@@ -7,6 +7,7 @@ import { Breadcrumbs, CtaBand, Faq, JsonLd, ReviewLine, TrustStrip } from "./Bit
 import { Sidebar } from "./Sidebar";
 import { ExpertByline } from "./Expert";
 import { PhoneIcon } from "./Icons";
+import { QuoteForm } from "./QuoteForm";
 
 type Props = {
   page: PageEntry;
@@ -19,6 +20,7 @@ type Props = {
 export function PageShell({ page, children, faqHeading, closing }: Props) {
   const faqs = faqsFor(page.slug);
   const isService = page.kind === "service" || page.kind === "city";
+  const isContact = page.slug === "contact";
   const showRelated = isService || page.slug === "about" || page.slug === "contact";
   return (
     <>
@@ -28,7 +30,28 @@ export function PageShell({ page, children, faqHeading, closing }: Props) {
           <Breadcrumbs name={page.breadcrumb} />
           {page.ogLabel && <p className="config-label mt-8">{page.ogLabel}</p>}
           <h1 className="mt-3 max-w-3xl text-[clamp(2rem,1.4rem+2.6vw,3.25rem)] font-bold">{page.h1}</h1>
-          <p className="mt-4 max-w-2xl text-lg text-frame-soft sm:text-xl">{page.subline}</p>
+          {isContact ? (
+            // Contact page: the quote form sits directly under the H1, as the first thing on the page.
+            <section
+              id="quote"
+              aria-labelledby="quote-heading"
+              className="-mx-4 mt-6 scroll-mt-24 border-t-4 border-bronze bg-white px-4 py-6 shadow-[0_24px_60px_-28px_rgb(28_38_38/0.5)] ring-1 ring-alu/50 sm:mx-0 sm:max-w-3xl sm:rounded-2xl sm:p-8"
+            >
+              <p className="config-label">GET A QUOTE</p>
+              <h2 id="quote-heading" className="mt-1 text-[clamp(1.5rem,1.2rem+1.2vw,2rem)] font-extrabold">
+                Tell us what your door <span className="text-bronze">is doing</span>
+              </h2>
+              <p className="mt-2 text-frame-soft">{page.subline}</p>
+              <div className="mt-5">
+                <QuoteForm wide />
+              </div>
+              <a href={telHref} className="mt-5 inline-flex items-center gap-2 font-bold text-teal no-underline hover:underline">
+                <PhoneIcon className="h-4 w-4" /> Rather talk? Call {business.phone}
+              </a>
+            </section>
+          ) : (
+            <p className="mt-4 max-w-2xl text-lg text-frame-soft sm:text-xl">{page.subline}</p>
+          )}
           {isService && (
             <>
               <div className="mt-6 flex flex-wrap gap-3">
