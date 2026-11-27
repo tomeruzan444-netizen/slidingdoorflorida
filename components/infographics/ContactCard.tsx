@@ -1,5 +1,5 @@
-import { business, countyList, known, mailHref, telHref } from "@/content/business";
-import { PhoneIcon } from "../Icons";
+import { business, countyList, known, mailHref, socialProfiles, telHref } from "@/content/business";
+import { FacebookIcon, PhoneIcon } from "../Icons";
 
 /** Phone, email, hours and coverage, straight from business.ts. Service-area business: no address. */
 export function ContactCard() {
@@ -15,6 +15,15 @@ export function ContactCard() {
       <div className="panel p-5">
         <span className="block text-sm text-frame-soft">Email</span>
         <a href={mailHref} className="break-all font-semibold">{business.email}</a>
+        {socialProfiles.map((s) => (
+          <span key={s.url} className="mt-2 block">
+            <span className="block text-sm text-frame-soft">{s.name}</span>
+            <a href={s.url} target="_blank" rel="me noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold">
+              <FacebookIcon className="h-4 w-4 text-bronze" /> Find us on {s.name}
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          </span>
+        ))}
         {known(business.hoursText) && (
           <>
             <span className="mt-2 block text-sm text-frame-soft">Hours</span>

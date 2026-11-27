@@ -41,3 +41,6 @@ export const CheckIcon = ({ className = "h-4 w-4" }: IconProps) => (
 export const RulerIcon = ({ className = "h-4 w-4" }: IconProps) => (
   <svg viewBox="0 0 24 24" className={className} aria-hidden="true" focusable="false"><rect x="2.5" y="8" width="19" height="8" rx="1.2" {...line} /><path d="M6.5 8v3M10 8v4.5M13.5 8v3M17 8v4.5" {...line} /></svg>
 );
+export const FacebookIcon = ({ className = "h-4 w-4" }: IconProps) => (
+  <svg viewBox="0 0 24 24" className={className} aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3z" /></svg>
+);

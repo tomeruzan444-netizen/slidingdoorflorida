@@ -1,4 +1,4 @@
-import { business, known, serviceCities, siteUrl } from "@/content/business";
+import { business, known, serviceCities, siteUrl, socialProfiles } from "@/content/business";
 import { pages, pathFor } from "@/content/pages";
 
 export const dynamic = "force-static";
@@ -17,6 +17,7 @@ export function GET() {
     "",
     ...(cities.length ? ["## City pages", ...cities.map((p) => `- [${p.h1}](${siteUrl}${pathFor(p.slug)})`), ""] : []),
     "## Company",
+    ...socialProfiles.map((p) => `- [${p.name}](${p.url})`),
     `- [About](${siteUrl}/about)`,
     `- [Contact and quote](${siteUrl}/contact)`,
     "",

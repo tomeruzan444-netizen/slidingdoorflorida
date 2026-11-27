@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { business, known, mailHref, telHref } from "@/content/business";
+import { business, known, mailHref, socialProfiles, telHref } from "@/content/business";
 import { services } from "@/content/services";
 import { cityHref } from "@/lib/areas";
 import { LogoMark } from "./Logo";
-import { PhoneIcon } from "./Icons";
+import { FacebookIcon, PhoneIcon } from "./Icons";
 
 /** Every value comes from content/business.ts. Nothing about the business is hardcoded here. */
 export function Footer() {
@@ -31,6 +31,21 @@ export function Footer() {
                 {business.email}
               </a>
             </li>
+            {socialProfiles.map((s) => (
+              <li key={s.url}>
+                {/* rel="me": this profile belongs to the business (identity signal); it opens in a new tab. */}
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="me noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-alu-light no-underline hover:text-white"
+                >
+                  <FacebookIcon className="h-5 w-5 text-bronze" />
+                  <span className="underline decoration-frame-soft underline-offset-4">{business.brandName} on {s.name}</span>
+                  <span className="sr-only">(opens in a new tab)</span>
+                </a>
+              </li>
+            ))}
           </ul>
           <ul className="mt-5 space-y-1 text-sm leading-relaxed text-alu-light">
             <li>Founded by {business.founderName}. {business.yearsInBusiness} years on sliding doors.</li>

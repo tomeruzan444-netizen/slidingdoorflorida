@@ -93,7 +93,11 @@ export const business = {
   ] as ServiceCounty[],
 
   gbpUrl: "{{GBP_URL}}",
-  socialUrls: [] as string[], // {{SOCIAL_URLS}}: Yelp, BBB, Facebook, Nextdoor...
+  /**
+   * The business's own profiles (owner-supplied). They feed schema sameAs, the footer and the contact card.
+   * The only outbound links on the site: the owner's no-outbound-links rule covers sources and third parties, not the business's own profiles.
+   */
+  socialUrls: ["https://www.facebook.com/davisslidingdoorrepair"] as string[],
 
   /** Only filled if the owner approves publishing price ranges. */
   priceRanges: "{{PRICE_RANGES}}",
@@ -137,6 +141,13 @@ export const isStaging = process.env.SITE_STAGING === "1" || isPlaceholder(busin
 
 export const telHref = `tel:${business.phoneE164}`;
 export const mailHref = `mailto:${business.email}`;
+
+/** Social profiles with a display name derived from the host (facebook.com -> Facebook). */
+export const socialProfiles = business.socialUrls.map((url) => {
+  const host = new URL(url).hostname.replace(/^www\./, "");
+  const known: Record<string, string> = { "facebook.com": "Facebook", "instagram.com": "Instagram", "yelp.com": "Yelp", "nextdoor.com": "Nextdoor", "youtube.com": "YouTube" };
+  return { url, name: known[host] ?? host };
+});
 
 /** Every city we serve, flat, in county order. */
 export const serviceCities = business.serviceAreas.flatMap((c) => c.cities.map((city) => ({ ...city, county: c.county })));
