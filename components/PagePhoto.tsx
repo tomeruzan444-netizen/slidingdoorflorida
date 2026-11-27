@@ -6,6 +6,7 @@ import screenRoller from "@/public/images/screen-door-roller-replacement.jpg";
 import lockKeeper from "@/public/images/sliding-door-lock-keeper-adjustment.jpg";
 import lockRepair from "@/public/images/sliding-door-lock-repair.jpg";
 import rollerAdjust from "@/public/images/sliding-door-roller-adjustment.jpg";
+import waterfront from "@/public/images/sliding-door-repair-florida.jpg";
 
 /**
  * In-article photos. Each one sits in the section it illustrates; the caption adds the practical point.
@@ -43,6 +44,11 @@ const PHOTOS: Record<string, { src: StaticImageData; alt: string; caption: strin
     alt: "Adjusting the roller screw at the bottom corner of a sliding screen door frame",
     caption: "A screen that drags or pops off its rail usually needs its roller height reset before anything gets replaced.",
   },
+  "waterfront-repair": {
+    src: waterfront,
+    alt: "Technician kneeling at the bottom rail of a sliding glass door, adjusting it with a screwdriver, with a canal and boats outside",
+    caption: "Most sliding door work happens down at the bottom rail, where the rollers and the track meet.",
+  },
   "patio-panel-lift": {
     src: patioLift,
     alt: "Lifting a sliding glass door panel in its frame, with a pool and a stepladder outside",
@@ -50,7 +56,8 @@ const PHOTOS: Record<string, { src: StaticImageData; alt: string; caption: strin
   },
 };
 
-export function PagePhoto({ name }: { name: keyof typeof PHOTOS | string }) {
+/** `caption` overrides the default so a photo used on several pages says something specific to each page. */
+export function PagePhoto({ name, caption }: { name: keyof typeof PHOTOS | string; caption?: string }) {
   const p = PHOTOS[name];
   if (!p) return null;
   return (
@@ -62,7 +69,7 @@ export function PagePhoto({ name }: { name: keyof typeof PHOTOS | string }) {
         sizes="(min-width: 1024px) 672px, 100vw"
         className="h-auto w-full rounded-lg ring-1 ring-alu/60"
       />
-      <figcaption className="figcap">{p.caption}</figcaption>
+      <figcaption className="figcap">{caption ?? p.caption}</figcaption>
     </figure>
   );
 }
