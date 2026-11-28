@@ -9,7 +9,7 @@ import { graphFor } from "@/lib/schema";
 import { CtaBand, Faq, JsonLd } from "@/components/Bits";
 import { ArrowIcon, BadgeIcon, CheckIcon, ClockIcon, PhoneIcon, PinIcon, RulerIcon, ShieldIcon } from "@/components/Icons";
 import { JosephSays } from "@/components/Expert";
-import { QuoteForm } from "@/components/QuoteForm";
+import { QuoteCard } from "@/components/QuoteCard";
 import { ServiceArt } from "@/components/ServiceArt";
 import Body from "@/content/pages/home.mdx";
 import heroImage from "@/public/images/sliding-door-repair-florida.jpg";
@@ -104,58 +104,43 @@ export default function Home() {
           <div className="hero-glass hero-glass--right" />
         </div>
 
-        <div className="mx-auto flex max-w-4xl flex-col items-center px-4 pb-36 pt-14 text-center sm:px-6 sm:pb-44 sm:pt-24 lg:pt-28">
-          <p className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-sea">
+        {/* DOM order is H1 then the quote form (owner rule, 2026-11-28). On large screens the grid
+            puts the form in the right column beside the headline. */}
+        <div className="mx-auto grid max-w-6xl items-start gap-x-12 px-4 pb-14 pt-10 text-center sm:px-6 sm:pt-16 lg:grid-cols-[minmax(0,1fr)_30rem] lg:grid-rows-[auto_auto_auto_auto_minmax(0,1fr)] lg:pb-20 lg:pt-20 lg:text-left">
+          <p className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-sea lg:col-start-1 lg:row-start-1 lg:mx-0 lg:justify-self-start">
             <PinIcon className="h-4 w-4" /> {business.teamSize} technicians &middot; crews across Florida
           </p>
-          <h1 className="mt-5 text-[clamp(2.4rem,1.5rem+3.6vw,4.4rem)] font-extrabold leading-[1.02] tracking-tight text-white">{page.h1}</h1>
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">{page.subline}</p>
-          <div className="mt-8 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
+          <h1 className="mt-5 text-[clamp(2.4rem,1.5rem+3.6vw,4.4rem)] font-extrabold leading-[1.02] tracking-tight text-white lg:col-start-1 lg:row-start-2">{page.h1}</h1>
+          <QuoteCard className="mt-6 lg:col-start-2 lg:row-span-5 lg:row-start-1 lg:mt-0" />
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl lg:col-start-1 lg:row-start-3 lg:mx-0 lg:mt-5">{page.subline}</p>
+          <div className="mt-6 flex justify-center lg:col-start-1 lg:row-start-4 lg:justify-start">
             <a
               href={telHref}
               className="inline-flex items-center justify-center gap-2.5 rounded-md bg-bronze px-7 py-4 text-lg font-bold text-white no-underline shadow-lg shadow-black/25 transition hover:-translate-y-0.5 hover:bg-bronze-dark"
             >
               <PhoneIcon className="h-5 w-5" /> Call {business.phone}
             </a>
-            <Link
-              href="#quote"
-              className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/85 px-7 py-4 text-lg font-bold text-white no-underline transition hover:bg-white hover:text-teal-deep"
-            >
-              Get a quote <ArrowIcon className="h-5 w-5" />
-            </Link>
           </div>
         </div>
         <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-[7px] border-y-[1.5px] border-white/30" />
       </section>
 
-      {/* ---------- Quote card, overlapping the hero ---------- */}
-      <section id="quote" aria-labelledby="quote-heading" className="relative z-10 mx-auto -mt-24 max-w-5xl scroll-mt-28 px-4 sm:-mt-32 sm:px-6">
-        <div className="grid gap-8 rounded-2xl bg-white p-6 shadow-[0_30px_70px_-25px_rgb(28_38_38/0.45)] ring-1 ring-alu/50 sm:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
-          <div>
-            <p className="config-label">GET A QUOTE</p>
-            <h2 id="quote-heading" className="mt-2 text-[clamp(1.7rem,1.3rem+1.4vw,2.3rem)] font-extrabold">
-              Tell us what your door <span className="text-bronze">is doing</span>
-            </h2>
-            <p className="mt-3 text-frame-soft">A photo of the bottom corner or the lock usually tells us more than a long description.</p>
-            <ol className="mt-6 space-y-5">
-              {STEPS.map((st, i) => (
-                <li key={st.t} className="flex gap-4">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sea font-bold text-teal-deep">{i + 1}</span>
-                  <span>
-                    <span className="block font-bold text-frame">{st.t}</span>
-                    <span className="block text-[0.98rem] text-frame-soft">{st.d}</span>
-                  </span>
-                </li>
-              ))}
-            </ol>
-            <a href={telHref} className="mt-7 inline-flex items-center gap-2 font-bold text-teal no-underline hover:underline">
-              <PhoneIcon className="h-4 w-4" /> Rather talk? Call {business.phone}
-            </a>
-          </div>
-          <div className="rounded-xl bg-sand/70 p-5 ring-1 ring-alu/40 sm:p-6">
-            <QuoteForm wide />
-          </div>
-        </div>
+      {/* ---------- How a quote works ---------- */}
+      <section aria-labelledby="steps-heading" className="mx-auto max-w-6xl px-4 pt-14 sm:px-6 sm:pt-16">
+        <h2 id="steps-heading" className="text-[clamp(1.6rem,1.3rem+1.2vw,2.2rem)] font-extrabold">
+          How a quote <span className="text-bronze">works</span>
+        </h2>
+        <ol className="mt-6 grid gap-6 sm:grid-cols-3">
+          {STEPS.map((st, i) => (
+            <li key={st.t} className="flex gap-4">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sea font-bold text-teal-deep">{i + 1}</span>
+              <span>
+                <span className="block font-bold text-frame">{st.t}</span>
+                <span className="block text-[0.98rem] text-frame-soft">{st.d}</span>
+              </span>
+            </li>
+          ))}
+        </ol>
       </section>
 
       {/* ---------- Feature row ---------- */}

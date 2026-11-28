@@ -19,7 +19,7 @@ export function Sidebar({ slug, showRelated = true }: { slug: string; showRelate
             <PhoneIcon /> {business.phone}
           </a>
           <Link
-            href="/contact#quote"
+            href="#quote"
             className="mt-2 block rounded border border-teal px-4 py-3 text-center font-semibold text-teal no-underline hover:bg-sea-soft"
           >
             Send a photo for a quote

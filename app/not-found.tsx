@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { business, telHref } from "@/content/business";
 import { services } from "@/content/services";
+import { QuoteCard } from "@/components/QuoteCard";
 
 export default function NotFound() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
       <p className="config-label">O X ? </p>
       <h1 className="mt-3 text-4xl font-bold">This page came off its track</h1>
-      <p className="mt-4 max-w-xl text-lg text-frame-soft">
+      <QuoteCard className="mt-6 sm:max-w-3xl" />
+      <p className="mt-8 max-w-xl text-lg text-frame-soft">
         The address doesn&apos;t match a page on our site. Pick the problem closest to yours, or call and describe it.
       </p>
       <a href={telHref} className="mt-6 inline-block rounded bg-bronze px-5 py-3 font-semibold text-white no-underline hover:bg-bronze-dark">

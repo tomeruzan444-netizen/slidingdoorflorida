@@ -76,7 +76,7 @@ export function CtaBand({ text }: { text: string }) {
         <a href={telHref} className="rounded bg-bronze px-5 py-3 font-semibold text-white no-underline hover:bg-bronze-dark">
           Call {business.phone}
         </a>
-        <Link href="/contact#quote" className="rounded border border-teal bg-white px-5 py-3 font-semibold text-teal no-underline hover:bg-sea-soft">
+        <Link href="#quote" className="rounded border border-teal bg-white px-5 py-3 font-semibold text-teal no-underline hover:bg-sea-soft">
           Send a photo
         </Link>
       </div>
